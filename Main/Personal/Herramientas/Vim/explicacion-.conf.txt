@@ -1,8 +1,0 @@
-set no errorsbells --> no hacer ruido al detectar error
-set sw=2--> editar tamaño tab's 
-set smartident --> identacion auto
-set rnu --> numeros raros
-set numberwidth=1 --> width del numero de lineas 
-set nowrap --> al haber muchos caracteres los siguientes no pasan a la siguiente linea
-set ignorecase --> al buscar una palabla ignora mayusculas/min
-set clipboard=unnamedplus --> el texto copiado va al portapapeles
