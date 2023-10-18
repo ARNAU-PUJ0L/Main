@@ -1,0 +1,101 @@
+<!--
+Los enlaces se encuentran en casi todas las páginas web. Los enlaces permiten a los usuarios hacer clic en su camino de una página a otra.
+
+Enlaces HTML - Hipervínculos
+    Los enlaces HTML son hipervínculos.
+    Puede hacer clic en un enlace y saltar a otro documento.
+    Cuando mueva el mouse sobre un enlace, la flecha del mouse se convertirá en una pequeña mano.
+    Nota: un enlace no tiene que ser texto. ¡Un enlace puede ser una imagen o cualquier otro elemento HTML!
+
+
+Enlaces HTML - Sintaxis
+
+    La <a>etiqueta HTML define un hipervínculo. Tiene la siguiente sintaxis:
+    <a href="url">link text</a>
+    El atributo más importante del <a> elemento es el hrefatributo, que indica el destino del enlace.
+    El texto del enlace es la parte que será visible para el lector.
+
+    Ejemplo:
+        <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+
+
+El atributo de destino
+    De forma predeterminada, la página vinculada se mostrará en la ventana del navegador actual. Para cambiar esto, debe especificar otro destino para el enlace.
+
+    El targetatributo especifica dónde abrir el documento vinculado.
+
+    El targetatributo puede tener uno de los siguientes valores:
+
+        _self- Defecto. Abre el documento en la misma ventana / pestaña en la que se hizo clic
+        _blank - Abre el documento en una nueva ventana o pestaña
+        _parent - Abre el documento en el marco principal.
+        _top - Abre el documento en el cuerpo completo de la ventana.
+                
+    Ejemplo:
+        <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+
+URL absolutas frente a URL relativas
+    Ambos ejemplos anteriores utilizan una URL absoluta (una dirección web completa) en el hrefatributo.
+
+    Un enlace local (un enlace a una página dentro del mismo sitio web) se especifica con una URL relativa (sin la parte "https: // www"):
+
+    Ejemplo
+        <h2>Absolute URLs</h2>
+        <p><a href="https://www.w3.org/">W3C</a></p>
+        <p><a href="https://www.google.com/">Google</a></p>
+
+        <h2>Relative URLs</h2>
+        <p><a href="html_images.asp">HTML Images</a></p>
+        <p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+
+Enlaces HTML: utilice una imagen como enlace
+    Para usar una imagen como enlace, simplemente coloque la <img> etiqueta dentro de la <a>etiqueta:
+
+    Ejemplo
+        <a href="default.asp">
+        <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+        </a>
+
+
+Enlace a una dirección de correo electrónico
+    Use mailto:dentro del hrefatributo para crear un enlace que abra el programa de correo electrónico del usuario (para permitirle enviar un nuevo correo electrónico):
+
+    Ejemplo
+        <a href="mailto:someone@example.com">Send email</a>
+
+
+Botón como enlace
+    Para usar un botón HTML como enlace, debe agregar algún código JavaScript.
+
+    JavaScript le permite especificar qué sucede en ciertos eventos, como hacer clic en un botón:
+
+    Ejemplo
+    <button onclick="document.location='default.asp'">HTML Tutorial</button>
+
+
+Títulos de enlaces
+    El titleatributo especifica información adicional sobre un elemento.
+    La información se muestra con mayor frecuencia como un texto de información sobre herramientas cuando el mouse se mueve sobre el elemento.
+
+    Ejemplo:
+        <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+
+Más sobre URL absolutas y URL relativas
+    Ejemplo
+        Utilice una URL completa para vincular a una página web: 
+
+            <a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>
+
+    Ejemplo
+         Enlace a una página ubicada en la carpeta html del sitio web actual: 
+
+            <a href="/html/default.asp">HTML tutorial</a>
+
+    Ejemplo
+        Enlace a una página ubicada en la misma carpeta que la página actual: 
+
+            <a href="default.asp">HTML tutorial</a>
+-->

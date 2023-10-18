@@ -1,0 +1,25 @@
+
+
+* {
+    background-color: rgb(50, 61, 2);
+    line-height: 25px;
+    text-align: center;
+}
+
+h2 {
+    background-color: red;
+    display: inline-block;
+    padding: 10px 50px ;
+    box-shadow: 10px 6px 10px 0 #000;
+    text-shadow: 2px 2px 7px #fff;
+}
+
+p {
+    background-color: aqua;
+    display: inline-block;
+    margin: 50px;
+    border-radius: 20%;
+    
+}
+
+

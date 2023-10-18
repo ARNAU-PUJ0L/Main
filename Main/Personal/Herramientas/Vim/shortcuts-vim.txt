@@ -1,0 +1,26 @@
+
+-----------BORRAR-----------------------
+x--> borrar letra en la q te encuentras
+
+shift+x--> borrar letra anterior
+d+b--> borrar espacio superior
+
+d+w--> borrar palabra
+d+d-->borrar linea
+
+shift+d--> borrar todo lo q hay delente del cursor (en la linea)
+d+0--> lo mismo al reves
+
+
+----------MOVIMIENTOS BASICOS-----------
+v+flechas--> seleccionar
+shift+v+flechas--> seleccionar lineas
+
+u-->deshacer
+ctrl+u-->hacer
+
+y-->copiar
+y+y-->copiar linea
+
+p-->Pegar en la siguiente linea
+shift+p-->Pegar en la anterior linea
