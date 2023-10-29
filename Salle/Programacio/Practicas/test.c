@@ -2,26 +2,14 @@
 
 int main() {
 
-    int num;
-    int i = 1;
-    int j = 1;
+    int n, result;
 
-    printf("Num enter positiu: ");
-    scanf("%d", &num);
+    printf("Enter n: ");
+    scanf("%d", &n);
 
-    while ( i <= num){
-        
-        if( i % j != 0){
+    result = !(n);
 
-            j++;
-
-        }
-
-        printf("%d", i);
-        i++;
-
-    }
-    
+    printf("%d", result);
 
 
     return 0;
