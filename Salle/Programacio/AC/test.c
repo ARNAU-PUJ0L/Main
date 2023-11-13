@@ -1,28 +1,32 @@
 #include <stdio.h>
+#include <math.h>
 
-int esDiezHappy(int n) {
-    int suma = 0;
+
+int binomial(int x, int y){
     
-    while (n > 0) {
-        int digito = n % 10;
-        suma += digito * digito;
-        n /= 10;
-    }
+    int fact_x, fact_y, result;
     
-    return suma == 10;
+    fact_x = !(x);
+    fact_y = !(y);
+    
+    result = (fact_x) / fact_y * !(x - y);
+    
+    return result;
 }
 
-int main() {
-    int numero;
-    
-    printf("Ingresa un número: ");
-    scanf("%d", &numero);
-    
-    if (esDiezHappy(numero)) {
-        printf("%d es un número 10-happy.\n", numero);
-    } else {
-        printf("%d no es un número 10-happy.\n", numero);
-    }
-    
-    return 0;
+
+
+
+int main () {
+	int m, n;
+	
+	printf("To calculate the binomial coefficient of M over N:\n");
+	printf("\tM: ");
+	scanf("%d", &m);
+	printf("\tN: ");
+	scanf("%d", &n);
+
+	printf("B(%d, %d) = %d\n", m, n, binomial(m, n));
+
+	return 0;
 }
