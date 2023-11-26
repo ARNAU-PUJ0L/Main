@@ -1,58 +1,79 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// Función para verificar si un número es primo
-int esPrimo(int num) {
-    if (num <= 1) {
-        return 0;  // No es primo
+#define NUM_ASCENSORES 3
+#define NUM_PLANTAS 8
+
+typedef struct {
+    char nombre;
+    int planta_actual;
+    int plantas_recorridas;
+} Ascensor;
+
+void inicializarAscensores(Ascensor ascensores[]) {
+    ascensores[0].nombre = 'A';
+    ascensores[1].nombre = 'B';
+    ascensores[2].nombre = 'G';
+
+    for (int i = 0; i < NUM_ASCENSORES; ++i) {
+        ascensores[i].planta_actual = 1;
+        ascensores[i].plantas_recorridas = 0;
     }
-
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) {
-            return 0;  // No es primo
-        }
-    }
-
-    return 1;  // Es primo
 }
 
-// Función para calcular la suma de los dígitos centrales
-int sumaDigitosCentrales(int num) {
-    int tercer_digito = (num / 100) % 10;
-    int segundo_digito = (num / 10) % 10;
-    return segundo_digito + tercer_digito;
+int absDiff(int a, int b) {
+    return abs(a - b);
 }
 
 int main() {
-    int numero;
+    Ascensor ascensores[NUM_ASCENSORES];
+    inicializarAscensores(ascensores);
 
-    do {
-        // Entrada del usuario
-        printf("Number? ");
-        scanf("%d", &numero);
+    int planta_usuario, planta_destino;
+    printf("Ingrese su planta actual (1-%d): ", NUM_PLANTAS);
+    scanf("%d", &planta_usuario);
 
-        // Verificar si el número tiene cuatro cifras
-        if (numero < 1000 || numero > 9999) {
-            printf("El numero debe tener cuatro cifras.\n");
-            continue;  // Volver a solicitar la entrada del usuario
+    if (planta_usuario < 1 || planta_usuario > NUM_PLANTAS) {
+        printf("La planta ingresada no es válida.\n");
+        return 1;
+    }
+
+    printf("Ingrese su planta de destino (1-%d): ", NUM_PLANTAS);
+    scanf("%d", &planta_destino);
+
+    if (planta_destino < 1 || planta_destino > NUM_PLANTAS) {
+        printf("La planta de destino ingresada no es válida.\n");
+        return 1;
+    }
+
+    int ascensor_elegido = 0; // Índice del ascensor más cercano
+
+    for (int i = 1; i < NUM_ASCENSORES; ++i) {
+        // Selección del ascensor más cercano según las reglas dadas
+        if (absDiff(ascensores[i].planta_actual, planta_usuario) <
+            absDiff(ascensores[ascensor_elegido].planta_actual, planta_usuario)) {
+            ascensor_elegido = i;
+        } else if (absDiff(ascensores[i].planta_actual, planta_usuario) ==
+                   absDiff(ascensores[ascensor_elegido].planta_actual, planta_usuario)) {
+            if (ascensores[i].plantas_recorridas < ascensores[ascensor_elegido].plantas_recorridas) {
+                ascensor_elegido = i;
+            } else if (ascensores[i].plantas_recorridas == ascensores[ascensor_elegido].plantas_recorridas) {
+                // En caso de empate, se selecciona preferiblemente en el siguiente orden: alpha, beta, gamma
+                if (ascensores[i].nombre == 'A' && ascensores[ascensor_elegido].nombre != 'A') {
+                    ascensor_elegido = i;
+                } else if (ascensores[i].nombre == 'B' && ascensores[ascensor_elegido].nombre == 'G') {
+                    ascensor_elegido = i;
+                }
+            }
         }
+    }
 
-        // Verificar si el número es primo
-        if (!esPrimo(numero)) {
-            printf("El numero no es primo.\n");
-            continue;  // Volver a solicitar la entrada del usuario
-        }
+    // Simular el movimiento del ascensor elegido
+    ascensores[ascensor_elegido].plantas_recorridas += absDiff(ascensores[ascensor_elegido].planta_actual, planta_usuario) +
+                                                      absDiff(planta_usuario, planta_destino);
+    ascensores[ascensor_elegido].planta_actual = planta_destino;
 
-        // Verificar si la suma de los dígitos centrales es igual a 10
-        if (sumaDigitosCentrales(numero) == 10) {
-            printf("Center adds up to 10\n");
-        } else {
-            printf("La suma de los digitos centrales no es igual a 10. Inténtalo de nuevo.\n");
-            continue;  // Volver a solicitar la entrada del usuario
-        }
+    printf("El ascensor %c se ha seleccionado para su viaje.\n", ascensores[ascensor_elegido].nombre);
 
-        break;  // Salir del bucle si todas las condiciones se cumplen
-
-    } while (1);  // Bucle infinito, se sale con 'break' cuando se cumplen todas las condiciones
-
-    return 0;  // Salir del programa sin errores
+    return 0;
 }

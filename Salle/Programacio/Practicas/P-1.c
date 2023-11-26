@@ -1,97 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int route_alpha, route_beta, route_gamma = 0;
-char from, to, option;
-int start, end;
-
-
-int route(){
-    
-    switch (from){
-
-        case '1':
-            start = 1;
-
-        case '2':
-            start = 2;
-
-        case '3':
-            start = 3;
-
-        case '4':
-            start = 4;
-            printf ("%d", start);
-
-        case '5': 
-            start = 5;
-
-        case 'A':
-            start = 6;
-
-        case 'B':
-            start = -1;
-
-        case 'G':
-            start = 0;
-        }
-
-    switch (to){
-
-        case '1':
-            end = 1;
-
-        case '2':
-            end = 2;
-
-        case '3':
-            end = 3;
-
-        case '4':
-            end = 4;
-
-        case '5': 
-            end = 5;
-
-        case 'A':
-            end = 6;
-
-        case 'B':
-            end = -1;
-
-        case 'G':
-            end = 0;
-                
-        }
-    
-    if (route_alpha <= route_beta && route_alpha <= route_gamma){
-    
-        route_alpha = end - start;
-        printf("%d", route_alpha);
-    
-    }else if (route_beta < route_alpha && route_beta <= route_gamma){
-
-        route_beta = end - start;
-        printf("%d", route_beta);
-
-    }else{
-
-        route_gamma = end - start;
-        printf("%d", route_gamma);
-
-    }
-
-    if(start == end){
-
-        printf("(ERROR) Are you joking?");
-
-    }
+char option;
+char from, to;
+int posicion_inicial_alpha, posicion_final_alpha, recorrido_alpha;
+int posicion_inicial_beta, posicion_final_beta, recorrido_beta;
+int posicion_inicial_gamma, posicion_final_gamma, recorrido_gamma;
 
 
-}
+
+
+
+
 
 
 int option_1 (){
 
+    char from, to;
+    
     printf("From ? ");
     scanf(" %c", &from);
 
@@ -110,37 +36,21 @@ int option_1 (){
         scanf(" %c", &to);
     }
 
-    route();
+    posicion_inicial_alpha = 2;
+    posicion_final_alpha = to;
+    recorrido_alpha = posicion_final_alpha - posicion_inicial_alpha;
 
+
+    printf("Pf: %d Rec %d", posicion_final_alpha, recorrido_alpha);
 
 }
 
 
 
 
-
-
-
-//int option_2(){}
-
-/*    
-    route_alpha = end - start;
-
-    route_beta = end - start;
-    
-    route_gamma = end - start;    
-    
-*/
-
-//int option_3(){}
-
-
-
-
-
-
 int menu(){
-    
+
+
     printf("A. Use Elevator | B. Statistic | C. Elevator inspection | Q. Quit\n");
     
     printf("Enter option: ");
@@ -168,23 +78,8 @@ int main(){
         menu();
     }
 
-    switch (option){
-        
-        case 'A':
-        case 'a':
-            option_1();
-/*
-        case 'B':
-        case 'b':
-          //  option_2();
+    option_1();
 
-        case 'C':
-        case 'c':
-            //option_3();
 
-        case 'q':
-        case 'Q':
-            //printf("\n\nSee you later!");
-  */  }
 
 }
