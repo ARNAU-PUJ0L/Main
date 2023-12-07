@@ -1,75 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-char obtenerAscensorCercano(int ascensores[], int num_ascensores, int planta_origen) {
-    char ascensor_cercano = 'a';
-    int distancia_cercana = planta_origen - ascensores[0];
+char alpha_floor = 'G';
+char beta_floor = 'G';
+char gamma_floor = 'G';
 
-    if (distancia_cercana < 0) {
-        distancia_cercana = -distancia_cercana;
-    }
+int alpha_distance = 0;
+int beta_distance = 0;
+int gamma_distance = 0;
 
-    for (int i = 1; i < num_ascensores; ++i) {
-        int distancia_actual = planta_origen - ascensores[i];
-
-        if (distancia_actual < 0) {
-            distancia_actual = -distancia_actual;
-        }
-
-        if (distancia_actual < distancia_cercana) {
-            ascensor_cercano = 'a' + i;  // Convertir índice a letra ('a', 'b', 'c')
-            distancia_cercana = distancia_actual;
-        }
-    }
-
-    return ascensor_cercano;
-}
-
-int test(){
-    int ascensores[] = {0, 0, 0};  // Las posiciones iniciales de los ascensores (alpha, beta, gamma)
-    int num_ascensores = sizeof(ascensores) / sizeof(ascensores[0]);
-
-    int planta_origen, planta_destino;
-
-    while (1) {
-        // Pregunta al usuario por la planta actual y destino
-        printf("From? ");
-        scanf("%d", &planta_origen);
-
-        while (planta_origen < '1' || (planta_origen > '5' && planta_origen != 'A' && planta_origen != 'B' && planta_origen != 'G')) {
-            printf("From ? ");
-            scanf(" %c", &planta_origen);
-    }
-
-
-        if (planta_origen == -1) {
-            break;
-        }
-
-        printf("To? ");
-        scanf("%d", &planta_destino);
-
-        while (planta_destino < '1' || (planta_destino > '5' && planta_destino != 'A' && planta_destino != 'B' && planta_destino != 'G')) {
-            printf("To ? ");
-            scanf(" %c", &planta_destino);
-    }
-
-        if (planta_origen == planta_destino) {
-            printf("(ERROR) Are you joking?\n\n");
-            break;
-        }
-
-        // Determina el ascensor más cercano
-        char ascensor_cercano = obtenerAscensorCercano(ascensores, num_ascensores, planta_origen);
-
-        // Muestra información y actualiza la posición del ascensor
-        printf("Usando ascensor %c.\n", ascensor_cercano);
-        ascensores[ascensor_cercano - 'a'] = planta_destino;
-
-        // Muestra información actualizada de los ascensores
-        printf("Estado de los ascensores:\n");
-        for (int i = 0; i < num_ascensores; ++i) {
-            printf("Ascensor %c en planta %d\n", 'a' + i, ascensores[i]);
-        }
+int floor_to_int(char floor) {
+    switch (floor) {
+        case 'B': return 0;
+        case 'G': return 1;
+        case 'A': return 8;
+        default: return floor - '0' + 1;
     }
 }
 
@@ -77,37 +22,100 @@ int test(){
 
 
 
+char request_elevator(char from) {
 
-/*
-void option1(char from, char to) {
 
+    int user_floor = floor_to_int(from);
+
+    int alpha_diff = abs(user_floor - floor_to_int(alpha_floor));
+    int beta_diff = abs(user_floor - floor_to_int(beta_floor));
+    int gamma_diff = abs(user_floor - floor_to_int(gamma_floor));
+
+    char selected_elevator = 'A';
+    int min_diff = alpha_diff;
+    int min_distance = alpha_distance;
+
+    if (beta_diff < min_diff || (beta_diff == min_diff && beta_distance < min_distance)) {
+        selected_elevator = 'B';
+        min_diff = beta_diff;
+        min_distance = beta_distance;
+    }
+
+    if (gamma_diff < min_diff || (gamma_diff == min_diff && gamma_distance < min_distance)) {
+        selected_elevator = 'G';
+    }
+
+    return selected_elevator;
+}
+
+
+
+
+void move_elevator(char elevator, char to) {
+
+
+
+    int to_floor = floor_to_int(to);
+
+    switch (elevator) {
+        case 'A':
+            alpha_distance += abs(floor_to_int(alpha_floor) - to_floor);
+            alpha_floor = to;
+            break;
+        case 'B':
+            beta_distance += abs(floor_to_int(beta_floor) - to_floor);
+            beta_floor = to;
+            break;
+        case 'G':
+            gamma_distance += abs(floor_to_int(gamma_floor) - to_floor);
+            gamma_floor = to;
+            break;
+    }
+}
+
+
+
+
+
+
+int option_A() {
+
+    
     char from, to;
 
-    printf("From ? ");
-    scanf(" %c", &from);
+    do {
 
-    while (from < '1' || (from > '5' && from != 'A' && from != 'B' && from != 'G')) {
-        printf("From ? ");
+        printf("From? ");
         scanf(" %c", &from);
-    }
 
-    printf("To ? ");
-    scanf(" %c", &to);
+    }while (from != '1' && from != '2' && from != '3' && from != '4' && from != '5' && from != 'A' && from != 'B' && from != 'G');
 
-    while (to < '1' || (to > '5' && to != 'A' && to != 'B' && to != 'G')) {
-        printf("To ? ");
+
+    do {
+
+        printf("To? ");
         scanf(" %c", &to);
-    }
 
-    if (from == to) {
-        printf("(ERROR) Are you joking?\n\n");
-    }
-}*/
+    }while (to != '1' && to != '2' && to != '3' && to != '4' && to != '5' && to != 'A' && to != 'B' && to != 'G');
 
 
-// no tocar
+    char selected_elevator = request_elevator(from);
+    printf("Elevator %c is coming.\n\n", selected_elevator);
+
+    move_elevator(selected_elevator, to);
+
+
+}
+
+
+
+
 
 int main() {
+    
+    
+    
+    
     char option;
 
     printf("Welcome to our building!\n\n");
@@ -117,8 +125,10 @@ int main() {
         printf("Enter option: ");
         scanf(" %c", &option);
 
-        while (option < 'a' || (option > 'c' && option != 'q' && option != 'Q')) {
+        while (option != 'A' && option != 'a' && option != 'B' && option != 'b' && option != 'C' && option != 'c' && option != 'Q' && option != 'q' ){
+
             printf("(ERROR) Invalid option\n\n");
+            printf("A. Use Elevator | B. Statistic | C. Elevator inspection | Q. Quit\n");
             printf("Enter option: ");
             scanf(" %c", &option);
         }
@@ -126,18 +136,16 @@ int main() {
         switch (option) {
             case 'a':
             case 'A':
-                test();
 
-                break;
+                option_A();
+
 
             case 'b':
             case 'B':
 
-                break;
             case 'c':
             case 'C':
 
-                break;
             case 'q':
             case 'Q':
 
