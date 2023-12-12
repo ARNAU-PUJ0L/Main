@@ -1,6 +1,21 @@
 #include <stdio.h>
 
 #define MAX_NOM 100
+#define MAX_MARCA 100
+
+// Typedef -> es un alies, ahora int x; == Enter x;
+
+typedef int Enter;
+
+// typedef + struct -> lo q antes se llamada struct coche ahora es coche (El nom del struct no es obligatori)
+
+typedef struct{
+    char marca[MAX_MARCA];
+    char matricula[MAX_MARCA];
+    int edat;
+} coche;
+
+
 
 // registres = conjunt de dades heterogeneas
 
@@ -38,13 +53,17 @@ int main(){
     struct Person p;
     struct Person p2;
 
+    Enter num;
+
     p = llegir_persona(); 
     printf("Nom: %s edat: %d DNI: %d-%c\n", p.nom, p.edat, p.num_DNI, p.lletra_DNI);
 
     p2 = llegir_persona();
-    printf("Nom: %s edat: %d DNI: %d-%c", p2.nom, p2.edat, p2.num_DNI, p2.lletra_DNI);
+    printf("Nom: %s edat: %d DNI: %d-%c\n", p2.nom, p2.edat, p2.num_DNI, p2.lletra_DNI);
 
-
+    printf("Introduce un numero: ");
+    scanf("%d", &num);
+    printf("Valor de tipo ENTER (INT): %d", num);
 
 
     return 0;
