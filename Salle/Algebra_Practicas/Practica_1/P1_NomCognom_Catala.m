@@ -1,60 +1,24 @@
 function [a,b,c,Determinant,Resultat,Resposta,Rang,X1,Tipus1,X2,Tipus2,X3,Base,Bc_B1,dB1,eB2,B2_B3,eB3] = P1_NomCognom_Catala()
-%% Practica 1. EXERCICIS MATLAB. ÀLGEBRA LINEAL
 
-%% NOM I COGNOMS DELS MEMBRES DEL GRUP
-%Membre 1:
-%Membre 2:
-%Membre 3:
-%Grup: A, B, C, D, E, F
+B1 = [3, 2, 3; 1, 5, 4; 2, 1, 0];
 
-%Per a executar el codi, cal copiar la linia 1 d'aquest fitxer a la línia
-%de comandes (sense la paraula function)
+%b) 
+Bc = [1, 0, 0; 
+      0, 1, 0;
+      0, 0, 1];
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                             TEMA 1                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Exercici 1 
-% a =   
-% b =   
-% c =   
+inversa= inv(B1);
 
-%Exercici 2 
-% Determinant = 
+Bc_B1 = inversa' * Bc;
 
-%Exercici 3 
-% Resultat = 
-% Resposta = ""
+%c)
 
-%Exercici 4 
-% Rang = 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                             TEMA 2                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Exercici 1
-% X1 = 
-% Tipus1 = 
-
-%Exercici 2
-% X2 = 
-% Tipus2 = 
-    
-%Exercici 3
-% X3 = 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                             TEMA 3                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Exercici 1 
-% Base = 
-
-%Exercici 2
-    %a) 
-% d = 
-    %b) 
-% Bc_B1=
-    %c)
 % dB1= 
+
+
+
+
 
 %Exercici 3
     %a)
