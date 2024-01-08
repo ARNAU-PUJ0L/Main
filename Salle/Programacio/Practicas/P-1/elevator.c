@@ -53,6 +53,10 @@ int main(){
     int beta_price_repare = 0;
     int gamma_price_repare = 0;
 
+    int alpha_total_price = 0;
+    int beta_total_price = 0;
+    int gamma_total_price = 0;
+
 
     printf("Welcome to our building!\n\n");
 
@@ -166,9 +170,15 @@ int main(){
                     }
 
 
+
+
+
+
+
                     char selected_elevator = 'A';
                     int min_diff = alpha_diff;
                     int min_distance = alpha_distance;
+
 
                     if (beta_diff < min_diff || (beta_diff == min_diff && beta_distance < min_distance)) {
                         selected_elevator = 'B';
@@ -179,6 +189,11 @@ int main(){
                     if (gamma_diff < min_diff || (gamma_diff == min_diff && gamma_distance < min_distance)) {
                         selected_elevator = 'G';
                     }
+
+
+
+
+
 
 
                     // Print Select elevator
@@ -210,12 +225,12 @@ int main(){
                         
                         case 'A':
                             
-                            diff_distance_alpha = floor_to_int(alpha_floor) - to_int;
+                            diff_distance_alpha = to_int - floor_to_int(alpha_floor);
 
                             if(diff_distance_alpha > 0){
-                                alpha_distance = diff_distance_alpha;
+                                alpha_distance += diff_distance_alpha;
                             }else{
-                                alpha_distance = diff_distance_alpha * (-1);
+                                alpha_distance += diff_distance_alpha * (-1);
                             }
 
                         
@@ -721,12 +736,12 @@ int main(){
                         case 'B':
 
 
-                            diff_distance_beta = floor_to_int(beta_distance) - to_int;
+                            diff_distance_beta = to_int - floor_to_int(beta_floor);
 
                             if(diff_distance_beta > 0){
-                                beta_distance = diff_distance_beta;
+                                beta_distance += diff_distance_beta;
                             }else{
-                                beta_distance = diff_distance_beta * (-1);
+                                beta_distance += (diff_distance_beta * (-1));
                             }
 
 
@@ -1221,12 +1236,12 @@ int main(){
 
                         case 'G':
                     
-                            diff_distance_gamma = floor_to_int(gamma_distance) - to_int;
+                            diff_distance_gamma = to_int - floor_to_int(gamma_floor);
         
                             if(diff_distance_gamma > 0){
-                                gamma_distance = diff_distance_gamma;
+                                gamma_distance += diff_distance_gamma;
                             }else{
-                                gamma_distance = diff_distance_gamma * (-1);
+                                gamma_distance += diff_distance_gamma * (-1);
                             }
 
 
@@ -1751,33 +1766,31 @@ int main(){
 
         if (option == 'C' || option == 'c'){
 
-            //----------------------------------------OPTION - C ---------------------------------------------------
-
-            
-
             if(alpha_plants_travelled >= FLOORS_FOR_INSPECTION){
                 
-                printf("\nElevator Alpha: inspection requiered");
-                alpha_price_repare += (alpha_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+                printf("\nElevator Alpha: inspection required");
+                alpha_price_repare = (alpha_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+                alpha_total_price += alpha_price_repare;
 
             }
 
             if(beta_plants_travelled >= FLOORS_FOR_INSPECTION){
 
-                printf("\nElevator Beta: inspection requiered");
-                beta_price_repare += (beta_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
-
+                printf("\nElevator Beta: inspection required");
+                beta_price_repare = (beta_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+                beta_total_price += beta_price_repare;
             }
 
 
             if(gamma_plants_travelled >= FLOORS_FOR_INSPECTION){
 
-                printf("\nElevator Gamma: inspection requiered");
-                gamma_price_repare += (gamma_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
-
+                printf("\nElevator Gamma: inspection required");
+                gamma_price_repare = (gamma_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+                gamma_total_price += gamma_price_repare;
             }
 
-            
+
+
 
             
             if(alpha_plants_travelled >= FLOORS_FOR_INSPECTION || beta_plants_travelled >= FLOORS_FOR_INSPECTION || gamma_plants_travelled >= FLOORS_FOR_INSPECTION){
@@ -1797,21 +1810,24 @@ int main(){
                     if(alpha_plants_travelled >= FLOORS_FOR_INSPECTION){
                         printf("Elevator Alpha inspected! (%d euros)\n", alpha_price_repare);
                         alpha_plants_travelled = 0;
+                        alpha_distance = 0;
                     }
 
                     if(beta_plants_travelled >= FLOORS_FOR_INSPECTION){
                         printf("Elevator Beta inspected! (%d euros)\n", beta_price_repare);
                         beta_plants_travelled = 0;
+                        beta_distance = 0;
                     }
 
 
                     if(gamma_plants_travelled >= FLOORS_FOR_INSPECTION){
                         printf("Elevator Gamma inspected! (%d euros)\n", gamma_price_repare);
                         gamma_plants_travelled = 0;
+                        gamma_distance = 0;
                     }
                     
 
-                    printf("\nAccumulated expense: %d euros\n\n", alpha_price_repare + beta_price_repare + gamma_price_repare);
+                    printf("\nAccumulated expense: %d euros\n\n", alpha_total_price + beta_total_price + gamma_total_price);
                     
 
                 }else{
@@ -1819,18 +1835,9 @@ int main(){
                 }
 
             }else{
-
-                printf("No requiered inspection\n\n");
-                printf("Accumulated expense: 0 euros\n\n");
-            
+                printf("\nNo required inspection\n\n");
+                printf("Accumulated expense: 0 euros\n\n");  
             }
-
-
-
-
-
-
-            ///------------------------------------------------------------------------------------------------------
         }
         
         if(option == 'Q' || option == 'q'){

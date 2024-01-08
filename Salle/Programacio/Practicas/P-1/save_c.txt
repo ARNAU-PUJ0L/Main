@@ -1,0 +1,83 @@
+       if (option == 'C' || option == 'c'){
+
+            //----------------------------------------OPTION - C ---------------------------------------------------
+
+            
+
+            if(alpha_plants_travelled >= FLOORS_FOR_INSPECTION){
+                
+                printf("\nElevator Alpha: inspection requiered");
+                alpha_price_repare += (alpha_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+
+            }
+
+            if(beta_plants_travelled >= FLOORS_FOR_INSPECTION){
+
+                printf("\nElevator Beta: inspection requiered");
+                beta_price_repare += (beta_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+
+            }
+
+
+            if(gamma_plants_travelled >= FLOORS_FOR_INSPECTION){
+
+                printf("\nElevator Gamma: inspection requiered");
+                gamma_price_repare += (gamma_plants_travelled / FLOORS_FOR_INSPECTION) * INSPECTION_PRICE;
+
+            }
+
+            
+
+            
+            if(alpha_plants_travelled >= FLOORS_FOR_INSPECTION || beta_plants_travelled >= FLOORS_FOR_INSPECTION || gamma_plants_travelled >= FLOORS_FOR_INSPECTION){
+
+                do{
+
+                    printf("\n\nPerform inspection? ");
+                    scanf(" %c", &do_inspection);
+
+                }while(do_inspection != 'Y' && do_inspection != 'y' && do_inspection != 'N' && do_inspection != 'n');
+                
+
+
+
+                if(do_inspection == 'Y' || do_inspection == 'y'){
+
+                    if(alpha_plants_travelled >= FLOORS_FOR_INSPECTION){
+                        printf("Elevator Alpha inspected! (%d euros)\n", alpha_price_repare);
+                        alpha_plants_travelled = 0;
+                    }
+
+                    if(beta_plants_travelled >= FLOORS_FOR_INSPECTION){
+                        printf("Elevator Beta inspected! (%d euros)\n", beta_price_repare);
+                        beta_plants_travelled = 0;
+                    }
+
+
+                    if(gamma_plants_travelled >= FLOORS_FOR_INSPECTION){
+                        printf("Elevator Gamma inspected! (%d euros)\n", gamma_price_repare);
+                        gamma_plants_travelled = 0;
+                    }
+                    
+
+                    printf("\nAccumulated expense: %d euros\n\n", alpha_price_repare + beta_price_repare + gamma_price_repare);
+                    
+
+                }else{
+                    printf("\nAccumulated expense: %d euros\n\n", alpha_price_repare + beta_price_repare + gamma_price_repare);
+                }
+
+            }else{
+
+                printf("No requiered inspection\n\n");
+                printf("Accumulated expense: 0 euros\n\n");
+            
+            }
+
+
+
+
+
+
+            ///------------------------------------------------------------------------------------------------------
+        }
