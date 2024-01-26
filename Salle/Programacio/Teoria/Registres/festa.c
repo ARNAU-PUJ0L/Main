@@ -1,16 +1,3 @@
-/* Festa
-        - nom festa - String
-        - data festa - Tipus Data
-                - dia - int
-                - mes - int
-                - any - int
-        - lloc - String
-        - numero assistents - int
-        - llistat assistents - Array de 1000 Assistents
-                - nom - String
-                - data naixement - Tipus Data
-                - num consumicions
-*/
 #include <stdio.h>
 #include <string.h>
 
