@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus/mux_4a1/simulation/qsim
+Emux_4a1
+Z1 w1707274319
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+R0
+Z8 8mux_4a1.vho
+Z9 Fmux_4a1.vho
+l0
+L34
+Vn_aaPCcd:Fh2I10[PaoFd1
+!s100 ^<LW`^KYYSPTZfPm?[3`B2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1707274320
+!i10b 1
+Z12 !s108 1707274320.000000
+Z13 !s90 -work|work|mux_4a1.vho|
+Z14 !s107 mux_4a1.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 mux_4a1 0 22 n_aaPCcd:Fh2I10[PaoFd1
+l85
+L45
+VDcTmn:flQ4JanCn7QSi3d1
+!s100 n=CBXaHkKDTKA:l3kTNMn1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Emux_4a1_vhd_vec_tst
+Z17 w1707274316
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L31
+V:Mm@<7Cac_?N^RVFYKK_O0
+!s100 C;4U37h[kDIP1QE21CUY43
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Amux_4a1_arch
+R5
+R6
+DEx4 work 19 mux_4a1_vhd_vec_tst 0 22 :Mm@<7Cac_?N^RVFYKK_O0
+l52
+L33
+VnzJOE4;h38ecGBZfn?[8Y3
+!s100 iiREl<N4o`F8>@AlAci6Y2
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16

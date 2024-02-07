@@ -1,0 +1,38 @@
+# do Practica101.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:41:41 on Feb 07,2024
+# vlog -work work Practica101.vo 
+# -- Compiling module Block2
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	Block2
+# End time: 03:41:41 on Feb 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:41:41 on Feb 07,2024
+# vlog -work work Waveform1.vwf.vt 
+# -- Compiling module Block2_vlg_vec_tst
+# 
+# Top level modules:
+# 	Block2_vlg_vec_tst
+# End time: 03:41:42 on Feb 07,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Block2_vlg_vec_tst 
+# Start time: 03:41:42 on Feb 07,2024
+# Loading work.Block2_vlg_vec_tst
+# Loading work.Block2
+# Loading work.hard_block
+# Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
+# Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
+# Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf
+# Loading fiftyfivenm_ver.fiftyfivenm_unvm
+# Loading fiftyfivenm_ver.fiftyfivenm_adcblock
+# ** Warning: (vsim-3017) Practica101.vo(175): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /Block2_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/fiftyfivenm_atoms.v
+# ** Warning: (vsim-3722) Practica101.vo(175): [TFMPC] - Missing connection for port 'clk_dft'.
+# after#24
+# ** Note: $finish    : Waveform1.vwf.vt(48)
+#    Time: 1 us  Iteration: 0  Instance: /Block2_vlg_vec_tst
+# End time: 03:41:43 on Feb 07,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2

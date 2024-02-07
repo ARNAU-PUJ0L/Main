@@ -1,0 +1,883 @@
+$comment
+	File created using the following command:
+		vcd file mux_4a1.msim.vcd -direction
+$end
+$date
+	Wed Feb 07 03:52:02 2024
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module mux_4a1_vhd_vec_tst $end
+$var wire 1 ! a [3] $end
+$var wire 1 " a [2] $end
+$var wire 1 # a [1] $end
+$var wire 1 $ a [0] $end
+$var wire 1 % b [3] $end
+$var wire 1 & b [2] $end
+$var wire 1 ' b [1] $end
+$var wire 1 ( b [0] $end
+$var wire 1 ) c [3] $end
+$var wire 1 * c [2] $end
+$var wire 1 + c [1] $end
+$var wire 1 , c [0] $end
+$var wire 1 - d [3] $end
+$var wire 1 . d [2] $end
+$var wire 1 / d [1] $end
+$var wire 1 0 d [0] $end
+$var wire 1 1 q [3] $end
+$var wire 1 2 q [2] $end
+$var wire 1 3 q [1] $end
+$var wire 1 4 q [0] $end
+$var wire 1 5 s [2] $end
+$var wire 1 6 s [1] $end
+$var wire 1 7 s [0] $end
+
+$scope module i1 $end
+$var wire 1 8 gnd $end
+$var wire 1 9 vcc $end
+$var wire 1 : unknown $end
+$var wire 1 ; devoe $end
+$var wire 1 < devclrn $end
+$var wire 1 = devpor $end
+$var wire 1 > ww_devoe $end
+$var wire 1 ? ww_devclrn $end
+$var wire 1 @ ww_devpor $end
+$var wire 1 A ww_a [3] $end
+$var wire 1 B ww_a [2] $end
+$var wire 1 C ww_a [1] $end
+$var wire 1 D ww_a [0] $end
+$var wire 1 E ww_b [3] $end
+$var wire 1 F ww_b [2] $end
+$var wire 1 G ww_b [1] $end
+$var wire 1 H ww_b [0] $end
+$var wire 1 I ww_c [3] $end
+$var wire 1 J ww_c [2] $end
+$var wire 1 K ww_c [1] $end
+$var wire 1 L ww_c [0] $end
+$var wire 1 M ww_d [3] $end
+$var wire 1 N ww_d [2] $end
+$var wire 1 O ww_d [1] $end
+$var wire 1 P ww_d [0] $end
+$var wire 1 Q ww_s [2] $end
+$var wire 1 R ww_s [1] $end
+$var wire 1 S ww_s [0] $end
+$var wire 1 T ww_q [3] $end
+$var wire 1 U ww_q [2] $end
+$var wire 1 V ww_q [1] $end
+$var wire 1 W ww_q [0] $end
+$var wire 1 X \a[0]~input_o\ $end
+$var wire 1 Y \a[1]~input_o\ $end
+$var wire 1 Z \a[2]~input_o\ $end
+$var wire 1 [ \a[3]~input_o\ $end
+$var wire 1 \ \b[0]~input_o\ $end
+$var wire 1 ] \b[1]~input_o\ $end
+$var wire 1 ^ \b[2]~input_o\ $end
+$var wire 1 _ \b[3]~input_o\ $end
+$var wire 1 ` \c[0]~input_o\ $end
+$var wire 1 a \c[1]~input_o\ $end
+$var wire 1 b \c[2]~input_o\ $end
+$var wire 1 c \c[3]~input_o\ $end
+$var wire 1 d \s[0]~input_o\ $end
+$var wire 1 e \s[1]~input_o\ $end
+$var wire 1 f \s[2]~input_o\ $end
+$var wire 1 g \q[0]~output_o\ $end
+$var wire 1 h \q[1]~output_o\ $end
+$var wire 1 i \q[2]~output_o\ $end
+$var wire 1 j \q[3]~output_o\ $end
+$var wire 1 k \d[0]~input_o\ $end
+$var wire 1 l \d[1]~input_o\ $end
+$var wire 1 m \d[2]~input_o\ $end
+$var wire 1 n \d[3]~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+08
+19
+x:
+1;
+1<
+1=
+1>
+1?
+1@
+0X
+0Y
+0Z
+0[
+1\
+0]
+1^
+0_
+1`
+0a
+1b
+0c
+1d
+0e
+1f
+0g
+0h
+1i
+0j
+0k
+0l
+1m
+0n
+0!
+0"
+0#
+0$
+0%
+1&
+0'
+1(
+0)
+1*
+0+
+1,
+0-
+1.
+0/
+00
+15
+06
+17
+0A
+0B
+0C
+0D
+0E
+1F
+0G
+1H
+0I
+1J
+0K
+1L
+0M
+1N
+0O
+0P
+1Q
+0R
+1S
+0T
+1U
+0V
+0W
+01
+12
+03
+04
+$end
+#10000
+1$
+1D
+1X
+#20000
+0$
+1#
+0D
+1C
+1Y
+0X
+#30000
+1$
+1D
+1X
+#40000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#50000
+1$
+1D
+1X
+#60000
+0$
+1#
+0D
+1C
+1Y
+0X
+#70000
+1$
+1D
+1X
+#80000
+0$
+0#
+0"
+1!
+0D
+0C
+0B
+1A
+1[
+0Z
+0Y
+0X
+#90000
+1$
+1D
+1X
+#100000
+0$
+1#
+1%
+1)
+0*
+0.
+10
+05
+16
+0D
+1C
+1E
+0J
+1I
+1P
+0N
+1R
+0Q
+0f
+1e
+0m
+1k
+1c
+0b
+1_
+1Y
+0X
+1g
+0i
+1W
+0U
+14
+02
+#110000
+1$
+1D
+1X
+#120000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#130000
+1$
+1D
+1X
+#140000
+0$
+1#
+0D
+1C
+1Y
+0X
+#150000
+1$
+1D
+1X
+#160000
+0$
+0#
+0"
+0!
+0D
+0C
+0B
+0A
+0[
+0Z
+0Y
+0X
+#170000
+1$
+1D
+1X
+#180000
+0$
+1#
+0D
+1C
+1Y
+0X
+#190000
+1$
+1D
+1X
+#200000
+0$
+0#
+1"
+0)
+1*
+1.
+00
+0&
+1'
+1-
+07
+0D
+0C
+1B
+1J
+0I
+0P
+1N
+1M
+1G
+0F
+0S
+0d
+0^
+1]
+1n
+1m
+0k
+0c
+1b
+1Z
+0Y
+0X
+0g
+1i
+1j
+0W
+1U
+1T
+04
+12
+11
+#210000
+1$
+1D
+1X
+#220000
+0$
+1#
+0D
+1C
+1Y
+0X
+#230000
+1$
+1D
+1X
+#240000
+0$
+0#
+0"
+1!
+0D
+0C
+0B
+1A
+1[
+0Z
+0Y
+0X
+#250000
+1$
+1D
+1X
+#260000
+0$
+1#
+0D
+1C
+1Y
+0X
+#270000
+1$
+1D
+1X
+#280000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#290000
+1$
+1D
+1X
+#300000
+0$
+1#
+0*
+0.
+10
+1&
+0-
+0%
+06
+1/
+0D
+1C
+0J
+1P
+1O
+0N
+0M
+1F
+0E
+0R
+0e
+0_
+1^
+0n
+0m
+1l
+1k
+0b
+1Y
+0X
+1g
+1h
+0i
+0j
+1W
+1V
+0U
+0T
+14
+13
+02
+01
+#310000
+1$
+1D
+1X
+#320000
+0$
+0#
+0"
+0!
+0D
+0C
+0B
+0A
+0[
+0Z
+0Y
+0X
+#330000
+1$
+1D
+1X
+#340000
+0$
+1#
+0D
+1C
+1Y
+0X
+#350000
+1$
+1D
+1X
+#360000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#370000
+1$
+1D
+1X
+#380000
+0$
+1#
+0D
+1C
+1Y
+0X
+#390000
+1$
+1D
+1X
+#400000
+0$
+0#
+0"
+1!
+0&
+1-
+16
+0'
+17
+15
+0(
+0D
+0C
+0B
+1A
+0H
+0G
+0F
+1M
+1S
+1R
+1Q
+1f
+1e
+1d
+1n
+0^
+0]
+0\
+1[
+0Z
+0Y
+0X
+1j
+1T
+11
+#410000
+1$
+1D
+1X
+#420000
+0$
+1#
+0D
+1C
+1Y
+0X
+#430000
+1$
+1D
+1X
+#440000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#450000
+1$
+1D
+1X
+#460000
+0$
+1#
+0D
+1C
+1Y
+0X
+#470000
+1$
+1D
+1X
+#480000
+0$
+0#
+0"
+0!
+0D
+0C
+0B
+0A
+0[
+0Z
+0Y
+0X
+#490000
+1$
+1D
+1X
+#500000
+0$
+1#
+0-
+07
+1*
+00
+0D
+1C
+0P
+0M
+0S
+1J
+1b
+0d
+0n
+0k
+1Y
+0X
+0g
+0j
+0W
+0T
+04
+01
+#510000
+1$
+1D
+1X
+#520000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#530000
+1$
+1D
+1X
+#540000
+0$
+1#
+0D
+1C
+1Y
+0X
+#550000
+1$
+1D
+1X
+#560000
+0$
+0#
+0"
+1!
+0D
+0C
+0B
+1A
+1[
+0Z
+0Y
+0X
+#570000
+1$
+1D
+1X
+#580000
+0$
+1#
+0D
+1C
+1Y
+0X
+#590000
+1$
+1D
+1X
+#600000
+0$
+0#
+1"
+1-
+17
+1'
+1(
+1.
+1)
+1+
+0D
+0C
+1B
+1N
+1M
+1S
+1H
+1G
+1K
+1I
+1c
+1a
+1]
+1\
+1d
+1n
+1m
+1Z
+0Y
+0X
+1i
+1j
+1U
+1T
+12
+11
+#610000
+1$
+1D
+1X
+#620000
+0$
+1#
+0D
+1C
+1Y
+0X
+#630000
+1$
+1D
+1X
+#640000
+0$
+0#
+0"
+0!
+0D
+0C
+0B
+0A
+0[
+0Z
+0Y
+0X
+#650000
+1$
+1D
+1X
+#660000
+0$
+1#
+0D
+1C
+1Y
+0X
+#670000
+1$
+1D
+1X
+#680000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#690000
+1$
+1D
+1X
+#700000
+0$
+1#
+0-
+07
+0.
+06
+1%
+0D
+1C
+0N
+0M
+0S
+0R
+1E
+1_
+0e
+0d
+0n
+0m
+1Y
+0X
+0i
+0j
+0U
+0T
+02
+01
+#710000
+1$
+1D
+1X
+#720000
+0$
+0#
+0"
+1!
+0D
+0C
+0B
+1A
+1[
+0Z
+0Y
+0X
+#730000
+1$
+1D
+1X
+#740000
+0$
+1#
+0D
+1C
+1Y
+0X
+#750000
+1$
+1D
+1X
+#760000
+0$
+0#
+1"
+0D
+0C
+1B
+1Z
+0Y
+0X
+#770000
+1$
+1D
+1X
+#780000
+0$
+1#
+0D
+1C
+1Y
+0X
+#790000
+1$
+1D
+1X
+#800000

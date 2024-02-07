@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/arnau/OneDrive/Escritorio/Main/Salle/IO/Practicas/P-1/Quartus/simulation/qsim
+vBlock2
+Z1 !s110 1707273701
+!i10b 1
+!s100 P>kd7]TUL<`2di?7z;nfZ0
+I;^N?B7]lUMOWKX]OK:@CN3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1707273699
+Z4 8Practica101.vo
+Z5 FPractica101.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1707273701.000000
+Z8 !s107 Practica101.vo|
+Z9 !s90 -work|work|Practica101.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@block2
+vBlock2_vlg_vec_tst
+!s110 1707273702
+!i10b 1
+!s100 @n6;h]R?kXE_Q=;9H<P@M1
+IBPWfn3iO69One^FQJMG[i2
+R2
+R0
+w1707273697
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@block2_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 [d:kmPPg[Olal=_hkU>YP1
+IMDDLC_DUA_=>V=JNeU]BO2
+R2
+R0
+R3
+R4
+R5
+L0 201
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

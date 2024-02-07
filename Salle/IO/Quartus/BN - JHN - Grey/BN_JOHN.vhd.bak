@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity BN_JOHN is
+	port(
+	
+			BN		: 		in 	std_logic_vector(2 downto 0);
+			Jhn	:		out	std_logic_vector(3 downto 0)
+	
+	);
+	
+end BN_JOHN
+
+
+architecture arch of BN_JOHN is
+
+begin
+
+	Jhn <= 	"0000" when BN "000" else
+				"0001" when BN "001" else
+				"0011" when BN "010" else
+				"0111" when BN "011" else
+				"1111" when BN "100" else
+				"1110" when BN "101" else
+				"1100" when BN "110" else
+				"1000" when BN "111" else
+				"0000";
+				
+end arch;

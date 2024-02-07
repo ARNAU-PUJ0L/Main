@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Quartus/comp_and/comp_and.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Quartus/comp_and/db/comp_and.cbx.xml
+design_name = comp_and
+instance = comp, \y~output\, y~output, comp_and, 1
+instance = comp, \a~input\, a~input, comp_and, 1
+instance = comp, \b~input\, b~input, comp_and, 1
+instance = comp, \y~0\, y~0, comp_and, 1

@@ -1,0 +1,79 @@
+|BN_conv
+BN[0] => BN_GRAY:B1.BN[0]
+BN[0] => BN_JOHN:B2.BN[0]
+BN[1] => BN_GRAY:B1.BN[1]
+BN[1] => BN_JOHN:B2.BN[1]
+BN[2] => BN_GRAY:B1.BN[2]
+BN[2] => BN_JOHN:B2.BN[2]
+sel => data_out.OUTPUTSELECT
+sel => data_out.OUTPUTSELECT
+sel => data_out.OUTPUTSELECT
+sel => data_out.OUTPUTSELECT
+data_out[0] << data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] << data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] << data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] << data_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BN_conv|BN_GRAY:B1
+BN[0] => Equal0.IN2
+BN[0] => Equal1.IN2
+BN[0] => Equal2.IN1
+BN[0] => Equal3.IN2
+BN[0] => Equal4.IN1
+BN[0] => Equal5.IN2
+BN[0] => Equal6.IN0
+BN[0] => Equal7.IN2
+BN[1] => Equal0.IN1
+BN[1] => Equal1.IN1
+BN[1] => Equal2.IN2
+BN[1] => Equal3.IN1
+BN[1] => Equal4.IN0
+BN[1] => Equal5.IN0
+BN[1] => Equal6.IN2
+BN[1] => Equal7.IN1
+BN[2] => Equal0.IN0
+BN[2] => Equal1.IN0
+BN[2] => Equal2.IN0
+BN[2] => Equal3.IN0
+BN[2] => Equal4.IN2
+BN[2] => Equal5.IN1
+BN[2] => Equal6.IN1
+BN[2] => Equal7.IN0
+Gray[0] <= Gray.DB_MAX_OUTPUT_PORT_TYPE
+Gray[1] <= Gray.DB_MAX_OUTPUT_PORT_TYPE
+Gray[2] <= Gray.DB_MAX_OUTPUT_PORT_TYPE
+Gray[3] <= <GND>
+
+
+|BN_conv|BN_JOHN:B2
+BN[0] => Equal0.IN2
+BN[0] => Equal1.IN0
+BN[0] => Equal2.IN2
+BN[0] => Equal3.IN1
+BN[0] => Equal4.IN2
+BN[0] => Equal5.IN1
+BN[0] => Equal6.IN2
+BN[0] => Equal7.IN2
+BN[1] => Equal0.IN1
+BN[1] => Equal1.IN2
+BN[1] => Equal2.IN0
+BN[1] => Equal3.IN0
+BN[1] => Equal4.IN1
+BN[1] => Equal5.IN2
+BN[1] => Equal6.IN1
+BN[1] => Equal7.IN1
+BN[2] => Equal0.IN0
+BN[2] => Equal1.IN1
+BN[2] => Equal2.IN1
+BN[2] => Equal3.IN2
+BN[2] => Equal4.IN0
+BN[2] => Equal5.IN0
+BN[2] => Equal6.IN0
+BN[2] => Equal7.IN0
+Jhn[0] <= Jhn.DB_MAX_OUTPUT_PORT_TYPE
+Jhn[1] <= Jhn.DB_MAX_OUTPUT_PORT_TYPE
+Jhn[2] <= Jhn.DB_MAX_OUTPUT_PORT_TYPE
+Jhn[3] <= Jhn.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+|mux_2a1
+a => and_out1.IN0
+b => and_out2.IN0
+s => and_out2.IN1
+s => and_out1.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
