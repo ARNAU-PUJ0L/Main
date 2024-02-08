@@ -1,0 +1,33 @@
+library ieee;                       
+use ieee.std_logic_1164.all; 
+
+
+entity ss_to_bcd is
+	port(
+
+		seven_seg	:		in 	std_logic_vector(6 downto 0);
+		bcd			:		out	std_logic_vector(3 downto 0)
+
+	);
+
+end ss_to_bcd;
+
+
+architecture arch of ss_to_bcd is
+
+
+begin
+
+	bcd <= "0000" when seven_seg = "1111110" else
+			 "0001" when seven_seg = "0110000" else
+			 "0011" when seven_seg = "1101101" else
+			 "0111" when seven_seg = "1111001" else
+			 "1111" when seven_seg = "0110011" else
+			 "1110" when seven_seg = "1011011" else
+			 "1100" when seven_seg = "1011111" else
+			 "1000" when seven_seg = "1010000" else
+			 "0000";
+
+
+end arch;
+

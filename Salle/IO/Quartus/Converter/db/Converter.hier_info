@@ -1,0 +1,11 @@
+|Converter
+G2 <= BN2.DB_MAX_OUTPUT_PORT_TYPE
+BN2 => G2.DATAIN
+BN2 => inst.IN1
+G1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+BN1 => inst.IN0
+BN1 => inst2.IN1
+G0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Bn0 => inst2.IN0
+
+
