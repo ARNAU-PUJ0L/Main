@@ -1,0 +1,262 @@
+|v_system
+BN[0] => BN_to_BCD:u1.BN[0]
+BN[0] => comparator_25:u4.c_a_25[0]
+BN[0] => comparator_15:u5.c_a_15[0]
+BN[1] => BN_to_BCD:u1.BN[1]
+BN[1] => comparator_25:u4.c_a_25[1]
+BN[1] => comparator_15:u5.c_a_15[1]
+BN[2] => BN_to_BCD:u1.BN[2]
+BN[2] => comparator_25:u4.c_a_25[2]
+BN[2] => comparator_15:u5.c_a_15[2]
+BN[3] => BN_to_BCD:u1.BN[3]
+BN[3] => comparator_25:u4.c_a_25[3]
+BN[3] => comparator_15:u5.c_a_15[3]
+BN[4] => BN_to_BCD:u1.BN[4]
+BN[4] => comparator_25:u4.c_a_25[4]
+BN[4] => comparator_15:u5.c_a_15[4]
+BN[5] => BN_to_BCD:u1.BN[5]
+BN[5] => comparator_25:u4.c_a_25[5]
+BN[5] => comparator_15:u5.c_a_15[5]
+validate => and_1:u6.b_1
+validate => and_2:u7.b_2
+validate => and_3:u8.b_3
+validate => and_4:u9.b_4
+D1[0] << and_1:u6.and_out_1[0]
+D1[1] << and_1:u6.and_out_1[1]
+D1[2] << and_1:u6.and_out_1[2]
+D1[3] << and_1:u6.and_out_1[3]
+D1[4] << and_1:u6.and_out_1[4]
+D1[5] << and_1:u6.and_out_1[5]
+D1[6] << and_1:u6.and_out_1[6]
+D0[0] << and_2:u7.and_out_2[0]
+D0[1] << and_2:u7.and_out_2[1]
+D0[2] << and_2:u7.and_out_2[2]
+D0[3] << and_2:u7.and_out_2[3]
+D0[4] << and_2:u7.and_out_2[4]
+D0[5] << and_2:u7.and_out_2[5]
+D0[6] << and_2:u7.and_out_2[6]
+greater << and_3:u8.and_out_3
+lower << and_4:u9.and_out_4
+
+
+|v_system|BN_to_BCD:u1
+BN[0] => Dig_2[0].DATAIN
+BN[1] => Dig_2[1].DATAIN
+BN[2] => Dig_2[2].DATAIN
+BN[3] => Dig_2[3].DATAIN
+BN[4] => Dig_1[0].DATAIN
+BN[5] => Dig_1[1].DATAIN
+Dig_1[0] <= BN[4].DB_MAX_OUTPUT_PORT_TYPE
+Dig_1[1] <= BN[5].DB_MAX_OUTPUT_PORT_TYPE
+Dig_1[2] <= <GND>
+Dig_1[3] <= <GND>
+Dig_2[0] <= BN[0].DB_MAX_OUTPUT_PORT_TYPE
+Dig_2[1] <= BN[1].DB_MAX_OUTPUT_PORT_TYPE
+Dig_2[2] <= BN[2].DB_MAX_OUTPUT_PORT_TYPE
+Dig_2[3] <= BN[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|bcd_to_7s_1:u2
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[0] => seg_1.IN1
+bcd_1[1] => seg_1.IN1
+bcd_1[1] => seg_1.IN1
+bcd_1[1] => seg_1.IN1
+bcd_1[1] => seg_1.IN1
+bcd_1[1] => seg_1.IN1
+bcd_1[2] => seg_1.IN0
+bcd_1[2] => seg_1.IN0
+bcd_1[2] => seg_1.IN0
+bcd_1[3] => seg_1.IN1
+bcd_1[3] => seg_1.IN1
+bcd_1[3] => seg_1.IN1
+seg_1[0] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+seg_1[1] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+seg_1[2] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+seg_1[3] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+seg_1[4] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+seg_1[5] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+seg_1[6] <= seg_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|bcd_to_7s_2:u3
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[0] => seg_2.IN1
+bcd_2[1] => seg_2.IN1
+bcd_2[1] => seg_2.IN1
+bcd_2[1] => seg_2.IN1
+bcd_2[1] => seg_2.IN1
+bcd_2[1] => seg_2.IN1
+bcd_2[2] => seg_2.IN0
+bcd_2[2] => seg_2.IN0
+bcd_2[2] => seg_2.IN0
+bcd_2[3] => seg_2.IN1
+bcd_2[3] => seg_2.IN1
+bcd_2[3] => seg_2.IN1
+seg_2[0] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+seg_2[1] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+seg_2[2] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+seg_2[3] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+seg_2[4] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+seg_2[5] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+seg_2[6] <= seg_2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|comparator_25:u4
+c_a_25[0] => LessThan0.IN6
+c_a_25[0] => Equal0.IN5
+c_a_25[0] => LessThan1.IN6
+c_a_25[1] => LessThan0.IN5
+c_a_25[1] => Equal0.IN4
+c_a_25[1] => LessThan1.IN5
+c_a_25[2] => LessThan0.IN4
+c_a_25[2] => Equal0.IN3
+c_a_25[2] => LessThan1.IN4
+c_a_25[3] => LessThan0.IN3
+c_a_25[3] => Equal0.IN2
+c_a_25[3] => LessThan1.IN3
+c_a_25[4] => LessThan0.IN2
+c_a_25[4] => Equal0.IN1
+c_a_25[4] => LessThan1.IN2
+c_a_25[5] => LessThan0.IN1
+c_a_25[5] => Equal0.IN0
+c_a_25[5] => LessThan1.IN1
+c_b_25[0] => LessThan0.IN12
+c_b_25[0] => Equal0.IN11
+c_b_25[0] => LessThan1.IN12
+c_b_25[1] => LessThan0.IN11
+c_b_25[1] => Equal0.IN10
+c_b_25[1] => LessThan1.IN11
+c_b_25[2] => LessThan0.IN10
+c_b_25[2] => Equal0.IN9
+c_b_25[2] => LessThan1.IN10
+c_b_25[3] => LessThan0.IN9
+c_b_25[3] => Equal0.IN8
+c_b_25[3] => LessThan1.IN9
+c_b_25[4] => LessThan0.IN8
+c_b_25[4] => Equal0.IN7
+c_b_25[4] => LessThan1.IN8
+c_b_25[5] => LessThan0.IN7
+c_b_25[5] => Equal0.IN6
+c_b_25[5] => LessThan1.IN7
+AGB_25 <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AEB_25 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+ALB_25 <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|comparator_15:u5
+c_a_15[0] => LessThan0.IN6
+c_a_15[0] => Equal0.IN5
+c_a_15[0] => LessThan1.IN6
+c_a_15[1] => LessThan0.IN5
+c_a_15[1] => Equal0.IN4
+c_a_15[1] => LessThan1.IN5
+c_a_15[2] => LessThan0.IN4
+c_a_15[2] => Equal0.IN3
+c_a_15[2] => LessThan1.IN4
+c_a_15[3] => LessThan0.IN3
+c_a_15[3] => Equal0.IN2
+c_a_15[3] => LessThan1.IN3
+c_a_15[4] => LessThan0.IN2
+c_a_15[4] => Equal0.IN1
+c_a_15[4] => LessThan1.IN2
+c_a_15[5] => LessThan0.IN1
+c_a_15[5] => Equal0.IN0
+c_a_15[5] => LessThan1.IN1
+c_b_15[0] => LessThan0.IN12
+c_b_15[0] => Equal0.IN11
+c_b_15[0] => LessThan1.IN12
+c_b_15[1] => LessThan0.IN11
+c_b_15[1] => Equal0.IN10
+c_b_15[1] => LessThan1.IN11
+c_b_15[2] => LessThan0.IN10
+c_b_15[2] => Equal0.IN9
+c_b_15[2] => LessThan1.IN10
+c_b_15[3] => LessThan0.IN9
+c_b_15[3] => Equal0.IN8
+c_b_15[3] => LessThan1.IN9
+c_b_15[4] => LessThan0.IN8
+c_b_15[4] => Equal0.IN7
+c_b_15[4] => LessThan1.IN8
+c_b_15[5] => LessThan0.IN7
+c_b_15[5] => Equal0.IN6
+c_b_15[5] => LessThan1.IN7
+AGB_15 <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AEB_15 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+ALB_15 <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|and_1:u6
+a_1[0] => and_out_1.DATAA
+a_1[1] => and_out_1.DATAA
+a_1[2] => and_out_1.DATAA
+a_1[3] => and_out_1.DATAA
+a_1[4] => and_out_1.DATAA
+a_1[5] => and_out_1.DATAA
+a_1[6] => and_out_1.DATAA
+b_1 => and_out_1.OUTPUTSELECT
+b_1 => and_out_1.OUTPUTSELECT
+b_1 => and_out_1.OUTPUTSELECT
+b_1 => and_out_1.OUTPUTSELECT
+b_1 => and_out_1.OUTPUTSELECT
+b_1 => and_out_1.OUTPUTSELECT
+b_1 => and_out_1.OUTPUTSELECT
+and_out_1[0] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+and_out_1[1] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+and_out_1[2] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+and_out_1[3] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+and_out_1[4] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+and_out_1[5] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+and_out_1[6] <= and_out_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|and_2:u7
+a_2[0] => and_out_2.DATAA
+a_2[1] => and_out_2.DATAA
+a_2[2] => and_out_2.DATAA
+a_2[3] => and_out_2.DATAA
+a_2[4] => and_out_2.DATAA
+a_2[5] => and_out_2.DATAA
+a_2[6] => and_out_2.DATAA
+b_2 => and_out_2.OUTPUTSELECT
+b_2 => and_out_2.OUTPUTSELECT
+b_2 => and_out_2.OUTPUTSELECT
+b_2 => and_out_2.OUTPUTSELECT
+b_2 => and_out_2.OUTPUTSELECT
+b_2 => and_out_2.OUTPUTSELECT
+b_2 => and_out_2.OUTPUTSELECT
+and_out_2[0] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+and_out_2[1] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+and_out_2[2] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+and_out_2[3] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+and_out_2[4] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+and_out_2[5] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+and_out_2[6] <= and_out_2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|and_3:u8
+a_3 => and_out_3.IN0
+b_3 => and_out_3.IN1
+and_out_3 <= and_out_3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|v_system|and_4:u9
+a_4 => and_out_4.IN0
+b_4 => and_out_4.IN1
+and_out_4 <= and_out_4.DB_MAX_OUTPUT_PORT_TYPE
+
+

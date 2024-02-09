@@ -34,14 +34,6 @@ typedef struct {
 
 
 
-void fix_str(char string[MAX_TARIF]){
-    for(int i = 0; i < MAX_TARIF; i++){
-        if (string[i] == '\n'){
-            string[i] = '\0';
-        }
-    }
-}
-
 void read_tariff(char tariffs[MAX_TARIF]){
 
     if(tariffs[0] == 'T'){
