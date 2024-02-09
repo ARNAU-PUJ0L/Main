@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Feb 09 10:56:59 2024
+Fitter Status : Successful - Fri Feb 09 20:45:58 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : v_system
 Top-level Entity Name : v_system
 Family : MAX 10
 Device : 10M50DAF484I7P
 Timing Models : Final
-Total logic elements : 20 / 49,760 ( < 1 % )
-    Total combinational functions : 20 / 49,760 ( < 1 % )
+Total logic elements : 41 / 49,760 ( < 1 % )
+    Total combinational functions : 41 / 49,760 ( < 1 % )
     Dedicated logic registers : 0 / 49,760 ( 0 % )
 Total registers : 0
 Total pins : 23 / 360 ( 6 % )

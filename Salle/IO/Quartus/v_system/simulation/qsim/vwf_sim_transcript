@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Feb 09 10:53:09 2024
+    Info: Processing started: Fri Feb 09 11:16:42 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off v_system -c v_system --vector_source=C:/Quartus/v_system/Waveform.vwf --testbench_file=C:/Quartus/v_system/simulation/qsim/Waveform.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -51,14 +51,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri Feb 09 10:53:11 2024
+    Info: Processing started: Fri Feb 09 11:16:44 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Quartus/v_system/simulation/qsim/ v_system -c v_system
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file v_system.vho in folder "C:/Quartus/v_system/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4638 megabytes
-    Info: Processing ended: Fri Feb 09 10:53:13 2024
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Feb 09 11:16:45 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -75,15 +75,15 @@ c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do v_system.do
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
-# 10.5b
 
+# 10.5b
 
 # do v_system.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:53:14 on Feb 09,2024
+# Start time: 11:16:47 on Feb 09,2024
 # vcom -work work v_system.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -97,10 +97,10 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Compiling entity v_system
 # -- Compiling architecture structure of v_system
 
-# End time: 10:53:14 on Feb 09,2024, Elapsed time: 0:00:00
+# End time: 11:16:47 on Feb 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:53:14 on Feb 09,2024
+# Start time: 11:16:47 on Feb 09,2024
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -108,11 +108,11 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package std_logic_1164
 # -- Compiling entity v_system_vhd_vec_tst
 # -- Compiling architecture v_system_arch of v_system_vhd_vec_tst
-# End time: 10:53:14 on Feb 09,2024, Elapsed time: 0:00:00
+# End time: 11:16:47 on Feb 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.v_system_vhd_vec_tst 
-# Start time: 10:53:15 on Feb 09,2024
+# Start time: 11:16:47 on Feb 09,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -130,7 +130,7 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
 # after#33
 
-# End time: 10:53:16 on Feb 09,2024, Elapsed time: 0:00:01
+# End time: 11:16:48 on Feb 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -143,7 +143,7 @@ Reading C:/Quartus/v_system/simulation/qsim/v_system.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Quartus/v_system/simulation/qsim/v_system_20240209105316.sim.vwf
+Writing the resulting VWF to C:/Quartus/v_system/simulation/qsim/v_system_20240209111648.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "D1[1]",
+					"strict" : false
+				},
+				{
 					"name" : "D1[2]",
 					"strict" : false
 				},
@@ -64,19 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "BN[4]",
-					"strict" : false
-				},
-				{
 					"name" : "validate",
 					"strict" : false
 				},
 				{
-					"name" : "BN[5]",
-					"strict" : false
-				},
-				{
-					"name" : "BN[3]",
+					"name" : "BN[1]",
 					"strict" : false
 				},
 				{
@@ -84,7 +80,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "BN[1]",
+					"name" : "BN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BN[5]",
 					"strict" : false
 				},
 				{

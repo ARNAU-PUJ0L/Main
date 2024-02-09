@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Feb 09 10:56:44 2024
+Analysis & Synthesis Status : Successful - Fri Feb 09 20:45:47 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : v_system
 Top-level Entity Name : v_system
 Family : MAX 10
-Total logic elements : 19
-    Total combinational functions : 19
+Total logic elements : 40
+    Total combinational functions : 40
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 23

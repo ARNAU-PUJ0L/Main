@@ -41,19 +41,41 @@ lower << and_4:u9.and_out_4
 
 |v_system|BN_to_BCD:u1
 BN[0] => Dig_2[0].DATAIN
-BN[1] => Dig_2[1].DATAIN
-BN[2] => Dig_2[2].DATAIN
-BN[3] => Dig_2[3].DATAIN
-BN[4] => Dig_1[0].DATAIN
-BN[5] => Dig_1[1].DATAIN
-Dig_1[0] <= BN[4].DB_MAX_OUTPUT_PORT_TYPE
-Dig_1[1] <= BN[5].DB_MAX_OUTPUT_PORT_TYPE
-Dig_1[2] <= <GND>
+BN[1] => Mux2.IN36
+BN[1] => Mux3.IN36
+BN[1] => Mux4.IN36
+BN[1] => Mux5.IN36
+BN[2] => Mux1.IN19
+BN[2] => Mux2.IN35
+BN[2] => Mux3.IN35
+BN[2] => Mux4.IN35
+BN[2] => Mux5.IN35
+BN[3] => Mux0.IN10
+BN[3] => Mux1.IN18
+BN[3] => Mux2.IN34
+BN[3] => Mux3.IN34
+BN[3] => Mux4.IN34
+BN[3] => Mux5.IN34
+BN[4] => Mux0.IN9
+BN[4] => Mux1.IN17
+BN[4] => Mux2.IN33
+BN[4] => Mux3.IN33
+BN[4] => Mux4.IN33
+BN[4] => Mux5.IN33
+BN[5] => Mux0.IN8
+BN[5] => Mux1.IN16
+BN[5] => Mux2.IN32
+BN[5] => Mux3.IN32
+BN[5] => Mux4.IN32
+BN[5] => Mux5.IN32
+Dig_1[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Dig_1[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Dig_1[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 Dig_1[3] <= <GND>
 Dig_2[0] <= BN[0].DB_MAX_OUTPUT_PORT_TYPE
-Dig_2[1] <= BN[1].DB_MAX_OUTPUT_PORT_TYPE
-Dig_2[2] <= BN[2].DB_MAX_OUTPUT_PORT_TYPE
-Dig_2[3] <= BN[3].DB_MAX_OUTPUT_PORT_TYPE
+Dig_2[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Dig_2[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Dig_2[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |v_system|bcd_to_7s_1:u2

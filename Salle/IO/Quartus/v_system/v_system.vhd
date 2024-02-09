@@ -1,6 +1,9 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+-- FIX 6 output 7s
+
+-- FIX validate
 
 entity v_system is
 

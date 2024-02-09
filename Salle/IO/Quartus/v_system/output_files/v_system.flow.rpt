@@ -1,5 +1,5 @@
 Flow report for v_system
-Fri Feb 09 10:57:17 2024
+Fri Feb 09 20:46:12 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Feb 09 10:57:17 2024       ;
+; Flow Status                        ; Successful - Fri Feb 09 20:46:12 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; v_system                                    ;
 ; Top-level Entity Name              ; v_system                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484I7P                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 20 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 20 / 49,760 ( < 1 % )                       ;
+; Total logic elements               ; 41 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 41 / 49,760 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 23 / 360 ( 6 % )                            ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/09/2024 10:56:23 ;
+; Start date & time ; 02/09/2024 20:45:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; v_system            ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 275469842019991.170747258301308        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 228935807638620.170750793113476        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -95,12 +95,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4799 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:14     ; 1.0                     ; 6197 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4684 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 4912 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Total                ; 00:00:49     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4787 MB             ; 00:00:30                           ;
+; Fitter               ; 00:00:10     ; 1.0                     ; 5630 MB             ; 00:00:12                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4679 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4819 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:02                           ;
+; Total                ; 00:00:36     ; --                      ; --                  ; 00:00:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,11 +109,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-SN8516O  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-SN8516O  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-SN8516O  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-SN8516O  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SN8516O  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

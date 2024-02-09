@@ -26,7 +26,7 @@ begin
     seg_2(3) <= (not bcd_2(3) and not bcd_2(2) and not bcd_2(1) and bcd_2(0)) or 
                 (not bcd_2(3) and bcd_2(2) and not bcd_2(1) and not bcd_2(0)) or 
                 (not bcd_2(3) and bcd_2(2) and bcd_2(1) and bcd_2(0)) or 
-                (bcd_2(3) and not bcd_2(2) and not bcd_2(1) and bcd_2(0));
+                (bcd_2(3) and not bcd_2(2) and not bcd_2(1) and bcd_2(0));/
     seg_2(2) <= (not bcd_2(3) and not bcd_2(2) and bcd_2(1) and not bcd_2(0));
     seg_2(1) <= (not bcd_2(3) and bcd_2(2) and not bcd_2(1) and bcd_2(0)) or 
                 (not bcd_2(3) and bcd_2(2) and bcd_2(1) and not bcd_2(0));
