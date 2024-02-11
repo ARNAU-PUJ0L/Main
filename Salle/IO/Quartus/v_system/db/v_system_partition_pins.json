@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "validate",
-					"strict" : false
-				},
-				{
 					"name" : "BN[1]",
 					"strict" : false
 				},
@@ -89,6 +85,10 @@
 				},
 				{
 					"name" : "BN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "validate",
 					"strict" : false
 				},
 				{
