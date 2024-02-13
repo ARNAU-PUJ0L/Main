@@ -15,6 +15,6 @@ architecture logic of and_4 is
 
 	begin
 	
-		and_out_4 <= a_4 and b_4;
+		and_out_4 <= not (a_4 and b_4);
 		
 	end logic;

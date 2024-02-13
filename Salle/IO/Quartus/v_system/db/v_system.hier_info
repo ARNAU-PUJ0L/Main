@@ -21,22 +21,22 @@ validate => and_1:u6.b_1
 validate => and_2:u7.b_2
 validate => and_3:u8.b_3
 validate => and_4:u9.b_4
-D1[0] << and_1:u6.and_out_1[0]
-D1[1] << and_1:u6.and_out_1[1]
-D1[2] << and_1:u6.and_out_1[2]
-D1[3] << and_1:u6.and_out_1[3]
-D1[4] << and_1:u6.and_out_1[4]
-D1[5] << and_1:u6.and_out_1[5]
-D1[6] << and_1:u6.and_out_1[6]
-D0[0] << and_2:u7.and_out_2[0]
-D0[1] << and_2:u7.and_out_2[1]
-D0[2] << and_2:u7.and_out_2[2]
-D0[3] << and_2:u7.and_out_2[3]
-D0[4] << and_2:u7.and_out_2[4]
-D0[5] << and_2:u7.and_out_2[5]
-D0[6] << and_2:u7.and_out_2[6]
-greater << and_3:u8.and_out_3
-lower << and_4:u9.and_out_4
+D1[0] <= and_1:u6.and_out_1[0]
+D1[1] <= and_1:u6.and_out_1[1]
+D1[2] <= and_1:u6.and_out_1[2]
+D1[3] <= and_1:u6.and_out_1[3]
+D1[4] <= and_1:u6.and_out_1[4]
+D1[5] <= and_1:u6.and_out_1[5]
+D1[6] <= and_1:u6.and_out_1[6]
+D0[0] <= and_2:u7.and_out_2[0]
+D0[1] <= and_2:u7.and_out_2[1]
+D0[2] <= and_2:u7.and_out_2[2]
+D0[3] <= and_2:u7.and_out_2[3]
+D0[4] <= and_2:u7.and_out_2[4]
+D0[5] <= and_2:u7.and_out_2[5]
+D0[6] <= and_2:u7.and_out_2[6]
+greater <= and_3:u8.and_out_3
+lower <= and_4:u9.and_out_4
 
 
 |v_system|BN_to_BCD:u1

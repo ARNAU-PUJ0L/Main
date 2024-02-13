@@ -14,8 +14,6 @@ void fix_str(char string[MAX_TARIF]){
 }
 
 
-
-
 int main(){
 
     char tariffs[MAX_TARIF];
@@ -24,14 +22,12 @@ int main(){
     fgets(tariffs, MAX_TARIF, stdin);
 
     fix_str(tariffs);
-
-
-
+    int i = 0;
     int k = 0;
     int j = 0;
     int x = 0;
 
-    for(int i = 0; i < MAX_TARIF; i++){
+    while(tariffs[i] != MAX_TARIF){
 
         if(tariffs[i] == 'C' && tariffs[i + 1] == 'A' && tariffs[i + 2] == 'R' && tariffs[i + 3] == 'S'){
 

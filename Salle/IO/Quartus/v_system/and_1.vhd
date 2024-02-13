@@ -19,7 +19,7 @@ begin
         if a_1 = "00000000" then
             and_out_1 <= num_0;
         elsif b_1 = '0' then
-            and_out_1 <= num_0;
+            and_out_1 <=  "1111111";
         else
             and_out_1 <= a_1;
         end if;

@@ -15,6 +15,6 @@ architecture logic of and_3 is
 
 	begin
 	
-		and_out_3 <= a_3 and b_3;
+		and_out_3 <= not (a_3 and b_3);
 		
 	end logic;

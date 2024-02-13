@@ -18,22 +18,6 @@
 */
 
 
-
-
-
-
-typedef struct {
-    
-    char type;
-    char plate[MAX_COMAND];
-    char enter_hour[MAX_COMAND];
-    char exit_hour[MAX_COMAND];
-
-
-}vehicle;
-
-
-
 void read_tariff(char tariffs[MAX_TARIF]){
 
     if(tariffs[0] == 'T'){
@@ -64,7 +48,6 @@ void enter(char comand[MAX_COMAND]){
     int valid = 1;
     int len_comand = strlen(comand);
     int num_vehicles = 0;
-
 
     do{
 
@@ -151,12 +134,8 @@ void enter(char comand[MAX_COMAND]){
         num_vehicles = MAX_VEHICLES;  // NS PQ
     }
 
-
-
-
-
-
 }
+
 
 
 

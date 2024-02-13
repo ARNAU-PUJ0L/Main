@@ -9,30 +9,30 @@ z2
 cModel Technology
 Z0 dC:/Quartus/v_system/simulation/qsim
 Ehard_block
-Z1 w1707473805
+Z1 w1707564668
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
-R0
-Z8 8v_system.vho
-Z9 Fv_system.vho
+Z8 dC:/Users/arnau/OneDrive/Escritorio/Main/Salle/IO/Quartus/v_system/simulation/qsim
+Z9 8v_system.vho
+Z10 Fv_system.vho
 l0
 L34
 V8_BbEmGd;OHS6h@;gFc7W3
 !s100 ROH=D<N4CT6aCZ<37A[_?0
-Z10 OV;C;10.5b;63
+Z11 OV;C;10.5b;63
 32
-Z11 !s110 1707473807
+Z12 !s110 1707725463
 !i10b 1
-Z12 !s108 1707473807.000000
-Z13 !s90 -work|work|v_system.vho|
-Z14 !s107 v_system.vho|
+Z13 !s108 1707725463.000000
+Z14 !s90 -work|work|v_system.vho|
+Z15 !s107 v_system.vho|
 !i113 1
-Z15 o-work work
-Z16 tExplicit 1 CvgOpt 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -45,16 +45,16 @@ l75
 L53
 Vg=W`CQ>24lhYF71zFSkY43
 !s100 zW6ML5NVY?Ai`]`n2XhME3
-R10
-32
 R11
-!i10b 1
+32
 R12
+!i10b 1
 R13
 R14
-!i113 1
 R15
+!i113 1
 R16
+R17
 Ev_system
 R1
 R2
@@ -63,23 +63,23 @@ R4
 R5
 R6
 R7
-R0
 R8
 R9
+R10
 l0
 L88
 VL0]n>ol7`emDR4Y2f1laH0
 !s100 9KJ><MF1OGPBY2nkO^SOL2
-R10
-32
 R11
-!i10b 1
+32
 R12
+!i10b 1
 R13
 R14
-!i113 1
 R15
+!i113 1
 R16
+R17
 Astructure
 R2
 R3
@@ -92,52 +92,52 @@ l198
 L125
 VQ4fjjAWij7lCQCF1BU>Nj2
 !s100 Sf[;Rn8ezMjj[cI>ni?Nl0
-R10
-32
 R11
-!i10b 1
+32
 R12
+!i10b 1
 R13
 R14
-!i113 1
 R15
+!i113 1
 R16
+R17
 Ev_system_vhd_vec_tst
-Z17 w1707473803
+R1
 R5
 R6
-R0
+R8
 Z18 8Waveform.vwf.vht
 Z19 FWaveform.vwf.vht
 l0
 L31
 Vm0g<TAjoznEO^D?8b88SG3
 !s100 _OVYIT6]5=VK5TM@X9_QN2
-R10
-32
 R11
+32
+Z20 !s110 1707725464
 !i10b 1
-R12
-Z20 !s90 -work|work|Waveform.vwf.vht|
-Z21 !s107 Waveform.vwf.vht|
+Z21 !s108 1707725464.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
 !i113 1
-R15
 R16
+R17
 Av_system_arch
 R5
 R6
-Z22 DEx4 work 20 v_system_vhd_vec_tst 0 22 m0g<TAjoznEO^D?8b88SG3
+Z24 DEx4 work 20 v_system_vhd_vec_tst 0 22 m0g<TAjoznEO^D?8b88SG3
 l52
 L33
-Z23 VAC?7Acc9UN7kQAbEXl6_a3
-Z24 !s100 `QOT6kQOP7InDa0Y<ilzA2
-R10
-32
+Z25 VAC?7Acc9UN7kQAbEXl6_a3
+Z26 !s100 `QOT6kQOP7InDa0Y<ilzA2
 R11
-!i10b 1
-R12
+32
 R20
+!i10b 1
 R21
+R22
+R23
 !i113 1
-R15
 R16
+R17
