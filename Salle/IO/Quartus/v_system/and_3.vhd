@@ -14,7 +14,17 @@ entity and_3 is
 architecture logic of and_3 is
 
 	begin
-	
-		and_out_3 <= not (a_3 and b_3);
-		
+    
+	 process(a_3, b_3)
+    begin
+        if a_3 = '0' then
+            and_out_3 <= '0' ;
+				
+				
+        elsif b_3 = '1' then -- val -> off
+            and_out_3 <=  '0'; --led off 
+        else
+            and_out_3 <= a_3;
+        end if;
+    end process;
 	end logic;

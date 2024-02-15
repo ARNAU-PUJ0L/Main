@@ -14,7 +14,18 @@ entity and_4 is
 architecture logic of and_4 is
 
 	begin
-	
-		and_out_4 <= not (a_4 and b_4);
+	 process(a_4, b_4)
+    begin
+        if a_4 = '0' then
+            and_out_4 <= '0' ;
+				
+				
+        elsif b_4 = '1' then -- val -> off
+            and_out_4 <=  '0'; --led off 
+        else
+            and_out_4 <= a_4;
+        end if;
+    end process;
+
 		
 	end logic;
