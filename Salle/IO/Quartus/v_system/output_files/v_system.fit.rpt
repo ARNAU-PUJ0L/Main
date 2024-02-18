@@ -1,5 +1,5 @@
 Fitter report for v_system
-Tue Feb 13 20:14:43 2024
+Sat Feb 17 00:04:33 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Feb 13 20:14:43 2024       ;
+; Fitter Status                      ; Successful - Sat Feb 17 00:04:33 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; v_system                                    ;
 ; Top-level Entity Name              ; v_system                                    ;
@@ -154,7 +154,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.4%      ;
+;     Processors 2-4         ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -1715,9 +1715,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/arnau/Desktop/Main/Salle/IO/Quartus/v_system/output_files/v_system.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 169 warnings
     Info: Peak virtual memory: 5630 megabytes
-    Info: Processing ended: Tue Feb 13 20:14:44 2024
+    Info: Processing ended: Sat Feb 17 00:04:33 2024
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+
