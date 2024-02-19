@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Feb 19 08:57:58 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : SCH
+Top-level Entity Name : SCH
+Family : MAX 10
+Total logic elements : 41
+    Total combinational functions : 41
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
