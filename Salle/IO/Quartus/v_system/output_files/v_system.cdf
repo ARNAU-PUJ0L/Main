@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/arnau/Desktop/Main/Salle/IO/Quartus/v_system/output_files/") File("v_system.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/arnau/OneDrive/Escritorio/Main/Salle/IO/Quartus/v_system/output_files/") File("v_system.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

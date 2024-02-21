@@ -1,5 +1,5 @@
 Flow report for practica2
-Mon Feb 12 09:22:25 2024
+Wed Feb 21 15:08:04 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Mon Feb 12 09:22:25 2024      ;
+; Flow Status                        ; Flow Failed - Wed Feb 21 15:08:04 2024      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; practica2                                   ;
 ; Top-level Entity Name              ; practica2                                   ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/12/2024 09:22:06 ;
+; Start date & time ; 02/21/2024 15:07:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; practica2           ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 275469842019991.170772612613200        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 275469842019991.170852446408504        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -95,8 +95,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4716 MB             ; 00:00:22                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4714 MB             ; 00:00:24                           ;
+; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

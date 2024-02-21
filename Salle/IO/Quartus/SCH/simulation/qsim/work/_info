@@ -7,14 +7,14 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Quartus/SCH/simulation/qsim
+dC:/Quartus/SCH/simulation/qsim
 vhard_block
-Z1 !s110 1708330156
+Z0 !s110 1708524825
 !i10b 1
 !s100 XogAODoD[37>NlRWV0K?82
 I54[:U<ic4Qh]X[DgG`Hgf1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/arnau/OneDrive/Escritorio/Main/Salle/IO/Quartus/SCH/simulation/qsim
 Z3 w1708330154
 Z4 8SCH.vo
 Z5 FSCH.vo
@@ -23,19 +23,19 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1708330156.000000
+Z7 !s108 1708524824.000000
 Z8 !s107 SCH.vo|
 Z9 !s90 -work|work|SCH.vo|
 !i113 1
 Z10 o-work work
 Z11 tCvgOpt 0
 vSCH
-R1
+R0
 !i10b 1
 !s100 _MfLkK1YZ_8QkDfN`AGgi3
 I[Ubof<h;H6f<6XjF]KHz91
+R1
 R2
-R0
 R3
 R4
 R5
@@ -52,13 +52,13 @@ R10
 R11
 n@s@c@h
 vSCH_vlg_vec_tst
-R1
+R0
 !i10b 1
 !s100 QTeI9jhNS3fERH7e4b]OQ1
 Iff<a?Nh9S_H<ZA7z6X^[=3
+R1
 R2
-R0
-w1708330152
+w1708524820
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
@@ -66,7 +66,7 @@ R6
 r1
 !s85 0
 31
-R7
+!s108 1708524825.000000
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1

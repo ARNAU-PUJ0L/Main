@@ -1,5 +1,5 @@
 Flow report for SCH
-Mon Feb 19 09:09:14 2024
+Wed Feb 21 15:13:43 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 19 09:09:14 2024       ;
+; Flow Status                        ; Successful - Wed Feb 21 15:13:42 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; SCH                                         ;
 ; Top-level Entity Name              ; SCH                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484I7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 42 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 42 / 49,760 ( < 1 % )                       ;
+; Total logic elements               ; 45 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 45 / 49,760 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 23 / 360 ( 6 % )                            ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/19/2024 08:57:37 ;
+; Start date & time ; 02/21/2024 15:12:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SCH                 ;
 +-------------------+---------------------+
@@ -77,15 +77,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 275469842019991.170832945706888        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 275469842019991.170852472110464        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; v_system    ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; v_system    ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; v_system    ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
@@ -95,16 +98,14 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4778 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:20     ; 1.0                     ; 6198 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4683 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 4912 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4626 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
-; Total                ; 00:01:02     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4779 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:14     ; 1.0                     ; 6200 MB             ; 00:00:16                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4684 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 4913 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
+; Total                ; 00:00:51     ; --                      ; --                  ; 00:00:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,8 +121,6 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-IMJLO3IT  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -133,8 +132,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off SCH -c SCH
 quartus_asm --read_settings_files=off --write_settings_files=off SCH -c SCH
 quartus_sta SCH -c SCH
 quartus_eda --read_settings_files=off --write_settings_files=off SCH -c SCH
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SCH -c SCH --vector_source=C:/Quartus/SCH/Waveform.vwf --testbench_file=C:/Quartus/SCH/simulation/qsim/Waveform.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Quartus/SCH/simulation/qsim/ SCH -c SCH
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SCH -c SCH --vector_source=C:/Quartus/SCH/Waveform.vwf --testbench_file=C:/Quartus/SCH/simulation/qsim/Waveform.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Quartus/SCH/simulation/qsim/ SCH -c SCH
 
