@@ -1,0 +1,16 @@
+FONDOS - Conjunto de valores
+
+	Gestionados -> El broker gestiona toda la compra/venta (hay mas comisiones)
+
+	Indexado -> Invertir en el ibex 35 // SP&500
+
+		ETF's -> fondo indexado que cotiza en bolsa
+
+		Emisor -> Creador del etf. Vanguard es el creador de los fondos ind.
+
+
+Estrategias de compra
+
+	Buy the Dip -> Compras cuando hay una bajada del valor.
+
+	DCA -> Compras periodicas. Ej: 300$/mes

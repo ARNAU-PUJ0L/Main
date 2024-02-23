@@ -1,30 +1,24 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_TARIF 100
 #define MAX_COMAND 50
+#define MAX_PRICE 15
+
+#define MAX 10
 
 #define MAX_VEHICLES 8
 #define MAX_OPERATIONS 10
 
-/* ERROR
+
+// ERROR: EN EL CASO Q SE INTRODUZCA UN COMANDO INEXISTENTE EN EL PRIMER PROMPT NO SALTA ERROR
 
 
-
-
-
-
-
-*/
-
-
-void read_tariff(char tariffs[MAX_TARIF]){
-
-    if(tariffs[0] == 'T'){
-        for(int i = 7; i < MAX_TARIF; i++){
-            if(tariffs[i] == '/'){
-                
-            }
+void fix_str(char string[MAX_TARIF]){
+    for(int i = 0; i < MAX_TARIF; i++){
+        if (string[i] == '\n'){
+            string[i] = '\0';
         }
     }
 }
@@ -39,6 +33,89 @@ int identify_comand(char str_1[MAX_COMAND], char str_2[MAX_COMAND]){
         return 1; // Las dos primeras letras son diferentes
     }  
 }
+
+
+
+
+
+void read_tariff(char tariffs[MAX_TARIF]){
+   
+    char truck[MAX] = "TRUCKS";
+    char car[MAX] = "CAR";
+    char bikes[MAX] = "BIKES";
+
+    int j = 0;
+    int i = 0;
+    int k = 0;
+    
+    char str_price_reduced[MAX_PRICE];
+    char str_price_peak[MAX_PRICE];
+    char str_price_normal[MAX_PRICE];
+    
+    int truck_price_reduced = 0;
+    int truck_price_peak = 0;
+    int truck_price_normal = 0;
+
+    int car_price_reduced = 0;
+    int car_price_peak = 0;
+    int car_price_normal = 0;
+
+    int bike_price_reduced = 0;
+    int bike_price_peak = 0;
+    int bike_price_normal = 0;
+
+
+    if(identify_comand(truck, tariffs) == 0){
+
+        while(tariffs[i] != ':'){
+            i++;
+        }
+
+        i++;
+
+        for(j = 0; j < MAX_PRICE && tariffs[i] != '/'; j++, i++){
+            str_price_reduced[j] = tariffs[i];
+        }
+        
+        str_price_reduced[j] = '\0';
+        truck_price_reduced = atoi(str_price_reduced);
+
+        i++;
+
+        for(j = 0; j < MAX_PRICE && tariffs[i] != '/'; j++, i++){
+            str_price_normal[j] = tariffs[i];
+        }
+
+        str_price_normal[j] = '\0';
+        truck_price_normal = atoi(str_price_normal);
+
+        i++;
+
+        for(j = 0; j < MAX_PRICE && (tariffs[i] != '#' || tariffs[i] != '\0'); j++, i++){
+            str_price_peak[j] = tariffs[i];
+        }
+
+        str_price_peak[j] = '\0';
+        truck_price_peak = atoi(str_price_peak);
+
+
+        printf("R:%d || N: %d || P: %d", truck_price_reduced, truck_price_normal, truck_price_peak);
+
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
 
 
 
