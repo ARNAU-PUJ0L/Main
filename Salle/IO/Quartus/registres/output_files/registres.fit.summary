@@ -1,0 +1,18 @@
+Fitter Status : Successful - Wed Feb 28 09:28:12 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : registres
+Top-level Entity Name : registres
+Family : MAX 10
+Device : 10M50DAF484I7P
+Timing Models : Final
+Total logic elements : 137 / 49,760 ( < 1 % )
+    Total combinational functions : 136 / 49,760 ( < 1 % )
+    Dedicated logic registers : 37 / 49,760 ( < 1 % )
+Total registers : 37
+Total pins : 48 / 360 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

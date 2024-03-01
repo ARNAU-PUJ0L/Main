@@ -1,0 +1,201 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DataOut",
+					"strict" : false
+				},
+				{
+					"name" : "Tx",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_1_N3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Aux_Result[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Send",
+					"strict" : false
+				},
+				{
+					"name" : "PCI",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Enter",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
