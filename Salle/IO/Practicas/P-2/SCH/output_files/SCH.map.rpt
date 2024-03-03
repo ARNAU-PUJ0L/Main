@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCH
-Wed Feb 21 15:12:22 2024
+Sun Mar 03 18:53:49 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,17 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: 7485:inst32
- 10. Parameter Settings for User Entity Instance: 7485:inst31
- 11. Parameter Settings for User Entity Instance: 7485:inst35
- 12. Parameter Settings for User Entity Instance: 7485:inst34
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -46,22 +36,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 21 15:12:22 2024       ;
+; Analysis & Synthesis Status        ; Failed - Sun Mar 03 18:53:49 2024           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; SCH                                         ;
 ; Top-level Entity Name              ; SCH                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 44                                          ;
-;     Total combinational functions  ; 44                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 23                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -156,8 +146,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -167,236 +157,24 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; SCH.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arnau/OneDrive/Escritorio/Main/Salle/IO/Quartus/SCH/SCH.bdf ;         ;
-; 7485.tdf                         ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf    ;         ;
-; aglobal.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal.inc   ;         ;
-; f7485.bdf                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/f7485.bdf   ;         ;
-; 7447.bdf                         ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7447.bdf    ;         ;
-; 74185.bdf                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/74185.bdf   ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 44          ;
-;                                             ;             ;
-; Total combinational functions               ; 44          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 31          ;
-;     -- 3 input functions                    ; 9           ;
-;     -- <=2 input functions                  ; 4           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 44          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 23          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; BN[4]~input ;
-; Maximum fan-out                             ; 24          ;
-; Total fan-out                               ; 195         ;
-; Average fan-out                             ; 2.17        ;
-+---------------------------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name        ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
-; |SCH                       ; 44 (27)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 23   ; 0            ; 0          ; |SCH                       ; SCH         ; work         ;
-;    |74185:inst|            ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|74185:inst            ; 74185       ; work         ;
-;    |7485:inst31|           ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst31           ; 7485        ; work         ;
-;       |f7485:sub|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst31|f7485:sub ; f7485       ; work         ;
-;    |7485:inst32|           ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst32           ; 7485        ; work         ;
-;       |f7485:sub|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst32|f7485:sub ; f7485       ; work         ;
-;    |7485:inst34|           ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst34           ; 7485        ; work         ;
-;       |f7485:sub|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst34|f7485:sub ; f7485       ; work         ;
-;    |7485:inst35|           ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst35           ; 7485        ; work         ;
-;       |f7485:sub|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCH|7485:inst35|f7485:sub ; f7485       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 7485:inst32 ;
-+------------------------+--------+------------------------+
-; Parameter Name         ; Value  ; Type                   ;
-+------------------------+--------+------------------------+
-; DEVICE_FAMILY          ; MAX 10 ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE         ;
-+------------------------+--------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 7485:inst31 ;
-+------------------------+--------+------------------------+
-; Parameter Name         ; Value  ; Type                   ;
-+------------------------+--------+------------------------+
-; DEVICE_FAMILY          ; MAX 10 ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE         ;
-+------------------------+--------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 7485:inst35 ;
-+------------------------+--------+------------------------+
-; Parameter Name         ; Value  ; Type                   ;
-+------------------------+--------+------------------------+
-; DEVICE_FAMILY          ; MAX 10 ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE         ;
-+------------------------+--------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 7485:inst34 ;
-+------------------------+--------+------------------------+
-; Parameter Name         ; Value  ; Type                   ;
-+------------------------+--------+------------------------+
-; DEVICE_FAMILY          ; MAX 10 ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE         ;
-+------------------------+--------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 23                          ;
-; cycloneiii_lcell_comb ; 44                          ;
-;     normal            ; 44                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 31                          ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.47                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 21 15:12:00 2024
+    Info: Processing started: Sun Mar 03 18:53:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCH -c SCH
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sch.bdf
     Info (12023): Found entity 1: SCH
 Info (12127): Elaborating entity "SCH" for the top level hierarchy
-Info (12128): Elaborating entity "7485" for hierarchy "7485:inst32"
-Info (12130): Elaborated megafunction instantiation "7485:inst32"
-Info (12128): Elaborating entity "f7485" for hierarchy "7485:inst32|f7485:sub" File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 27
-Info (12131): Elaborated megafunction instantiation "7485:inst32|f7485:sub", which is child of megafunction instantiation "7485:inst32" File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 27
-Info (12128): Elaborating entity "7485" for hierarchy "7485:inst31"
-Info (12130): Elaborated megafunction instantiation "7485:inst31"
-Info (12128): Elaborating entity "7485" for hierarchy "7485:inst35"
-Info (12130): Elaborated megafunction instantiation "7485:inst35"
-Info (12128): Elaborating entity "7447" for hierarchy "7447:inst9"
-Info (12130): Elaborated megafunction instantiation "7447:inst9"
-Info (12128): Elaborating entity "74185" for hierarchy "74185:inst"
-Info (12130): Elaborated megafunction instantiation "74185:inst"
-Info (13014): Ignored 4 buffer(s)
-    Info (13017): Ignored 4 CASCADE buffer(s)
-Info (286030): Timing-Driven Synthesis is running
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "7485:inst31|f7485:sub|84"
-    Info (17048): Logic cell "7485:inst34|f7485:sub|84"
-Warning (20013): Ignored 24 assignments for entity "v_system" -- entity does not exist in design
-    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity v_system -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity v_system -section_id Top was ignored
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 44 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Wed Feb 21 15:12:22 2024
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:24
+Error (287127): Text Design File syntax error: Text Design File contains a symbolic name where ';' was expected File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 26
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4706 megabytes
+    Error: Processing ended: Sun Mar 03 18:53:49 2024
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:27
 
 
