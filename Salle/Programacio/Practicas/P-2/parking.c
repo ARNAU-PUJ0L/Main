@@ -21,11 +21,23 @@
 #define MAX_VEHICLES 8
 #define MAX_OPERATIONS 10
 
+//*****************************************************************************
+/*                                  ERRORES
 
-// ERROR: EN EL CASO Q SE INTRODUZCA UN COMANDO INEXISTENTE EN EL PRIMER PROMPT NO SALTA ERROR
+**en el caso que el comando este mal, el cotxe aun asi es guardado. -- OKEY
+
+** No hace falta tener 8 funciones para las plates // se puede hacer como he exttraido lla hora
 
 
+** la matricula puede ser de 15 cart max
 
+** max operaciones es 10 (Creo q se supone que no hay que hacer nada)
+
+** error: Si fallas mas de 8 veces no sale el mensaje de error
+
+
+*/
+//*****************************************************************************
 
 void fix_str(char string[MAX_TARIF]){
     for(int i = 0; i < MAX_TARIF; i++){
@@ -44,6 +56,9 @@ int identify_comand(char str_1[MAX_COMAND], char str_2[MAX_COMAND]){
         return 1; 
     }  
 }
+
+
+
 
 
 int read_trucks(char tariffs[MAX_TARIF], int i){
@@ -292,6 +307,75 @@ void read_tariff(char tariffs[MAX_TARIF]){
 
 }
 
+char* extract_hour(char command[MAX_COMAND]){
+
+    char* hour = (char*)malloc(MAX_PLATE);
+
+    int i = 0;
+    int j = 0;
+
+    while(command[i] != ' '){
+        i++;
+    }
+
+    i++;
+
+    i = i + 2;
+
+    while(command[i] != ' '){
+        i++;
+    }
+
+    i++;
+
+    for(j = 0; command[i] != ':'; j++, i++){
+        hour[j] = command[i];
+    }
+
+    hour[j] = '\0';
+
+    return hour;
+
+}
+
+char* extract_min(char command[MAX_COMAND]){
+
+    char* min = (char*)malloc(MAX_PLATE);
+
+    int i = 0;
+    int j = 0;
+
+    while(command[i] != ' '){
+        i++;
+    }
+
+    i++;
+
+    i = i + 2;
+
+    while(command[i] != ' '){
+        i++;
+    }
+
+    i++;
+
+    while(command[i] != ':'){
+        i++;
+    }
+
+    i++;
+
+    for(j = 0; command[i] != '\0'; j++, i++){
+        min[j] = command[i];
+    }
+
+    min[j] = '\0';
+
+    return min;
+
+}
+
+
 
 char* plate_1(char command[MAX_COMAND]){
     
@@ -316,10 +400,10 @@ char* plate_1(char command[MAX_COMAND]){
     
     plate_1[j] = '\0';
 
-
     return plate_1;
 
 }
+
 
 char* plate_2(char command[MAX_COMAND]){
     
@@ -389,6 +473,8 @@ char* plate_4(char command[MAX_COMAND]){
     i++;
                     
     vehicle_4 = command[i];
+
+    i = i + 2;
             
     for(j = 0; command[i] != ' '; j++, i++){
         plate_4[j] = command[i]; 
@@ -518,7 +604,9 @@ int verificate_enter_command(char command[MAX_COMAND]){
         
         if((command[0] == 'e' && command[1] == 'n' && command[2] == 't' && command[3] == 'e' && command[4] == 'r') && (command[5] == ' ' && (command[6] == 'T' || command[6] == 'C' || command[6] == 'B') && command[7] == ' ')){
 
-            switch (len_command){ /// mal, pq la matricula puede serr una cedena de hasta 15 caract.
+            len_command = strlen(command);
+
+            switch (len_command){ 
                                 
                 case 21:
 
@@ -576,112 +664,92 @@ int verificate_enter_command(char command[MAX_COMAND]){
 
     }while(valid == 0); 
 
-    return 1;
+    return valid;
 }
 
 
-void compare_plates(char* plate_1, char* plate_2, char* plate_3, char* plate_4, char* plate_5, char* plate_6, char* plate_7, char* plate_8, int loop){
+int compare_plates(char* plate_1, char* plate_2, char* plate_3,char* plate_4, char* plate_5, char* plate_6, char* plate_7, char* plate_8, int loop, int num_cars){
     
-    int num_cars; // AQUI
-    
-    if(loop == 2){
-    /*
-        for(int i = 0; plate_1[i] != '\0'; i++){
-            printf("%c\n", plate_1[i]);
-        }
+    int equal = 0;
 
-        for(int i = 0; plate_2[i] != '\0'; i++){
-            printf("\n%c\n", plate_2[i]);
-        }   
-*/
+    if(loop == 2){
+
 
         if(strcmp(plate_1, plate_2) == 0){
 
             printf("(ERROR) This vehicle is already in the parking!");
 
         }else{
-            num_cars++;
+            equal = 1;
         }
     }
 
 
+    if(loop == 3){
+
+        if(strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0){
+
+            printf("(ERROR) This vehicle is already in the parking!");
+
+        }else{
+            equal = 1;
+        }             
+    }
 
 
+    if(loop == 4){ // error plate_2 && plate_4
+
+        if(strcmp(plate_1, plate_4) == 0 || strcmp(plate_2, plate_4) == 0 || strcmp(plate_3, plate_4) == 0){
+            printf("(ERROR) This vehicle is already in the parking!");
+
+        }else{
+            equal = 1;
+        }
+    }
 
 
-            if(loop == 3){
-                if(strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0){
+    if(loop == 5){
+        if(strcmp(plate_1, plate_5) == 0 || strcmp(plate_2, plate_5) == 0 || strcmp(plate_3, plate_5) == 0 || strcmp(plate_4, plate_5) == 0){
+            printf("(ERROR) This vehicle is already in the parking!");
 
-                    printf("(ERROR) This vehicle is already in the parking!");
+        }else{
+            equal = 1;
+        }
+    }
 
-                }else{
-                    num_cars++;
-                }             
-            }
+    if(loop == 6){
+        if(strcmp(plate_1, plate_6) == 0 || strcmp(plate_2, plate_6) == 0 || strcmp(plate_3, plate_6) == 0 || strcmp(plate_4, plate_6) == 0 || strcmp(plate_5, plate_6) == 0){
+            printf("(ERROR) This vehicle is already in the parking!");
 
-            if(loop == 4){
-                if(strcmp(plate_1, plate_2) == 0 || strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0 || strcmp(plate_1, plate_4) == 0 || strcmp(plate_2, plate_4) == 0
-                || strcmp(plate_3, plate_4) == 0){
+        }else{
+            equal = 1;
+        }
+    }
 
-                    printf("(ERROR) This vehicle is already in the parking!");
+    if(loop == 7){
+        if(strcmp(plate_1, plate_7) == 0 || strcmp(plate_2, plate_7) == 0 || strcmp(plate_3, plate_7) == 0 || strcmp(plate_4, plate_7) == 0 || strcmp(plate_5, plate_7) == 0
+        || strcmp(plate_6, plate_7) == 0){
+                    
+            printf("(ERROR) This vehicle is already in the parking!");
 
-                }else{
-                    num_cars++;
-                }
-            }
+        }else{
+            equal = 1;
+        }
+    }
 
+    if(loop == 8){
+        if(strcmp(plate_1, plate_8) == 0 || strcmp(plate_2, plate_8) == 0 || strcmp(plate_3, plate_8) == 0 || strcmp(plate_4, plate_8) == 0
+        || strcmp(plate_5, plate_8) == 0 || strcmp(plate_6, plate_8) == 0 || strcmp(plate_7, plate_8) == 0){
 
-            if(loop == 5){
-                if(strcmp(plate_1, plate_2) == 0 || strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0 || strcmp(plate_1, plate_4) == 0 || strcmp(plate_2, plate_4) == 0
-                || strcmp(plate_3, plate_4) == 0 || strcmp(plate_1, plate_5) == 0 || strcmp(plate_2, plate_5) == 0 || strcmp(plate_3, plate_5) == 0 || strcmp(plate_4, plate_5) == 0){
+            printf("(ERROR) This vehicle is already in the parking!");
 
-                    printf("(ERROR) This vehicle is already in the parking!");
+        }else{
+            equal = 1;
+        }
+    }
 
-                }else{
-                    num_cars++;
-                }
-            }
-
-            if(loop == 6){
-                if(strcmp(plate_1, plate_2) == 0 || strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0 || strcmp(plate_1, plate_4) == 0 || strcmp(plate_2, plate_4) == 0
-                || strcmp(plate_3, plate_4) == 0 || strcmp(plate_1, plate_5) == 0 || strcmp(plate_2, plate_5) == 0 || strcmp(plate_3, plate_5) == 0 || strcmp(plate_4, plate_5) == 0 
-                || strcmp(plate_1, plate_6) == 0 || strcmp(plate_2, plate_6) == 0 || strcmp(plate_3, plate_6) == 0 || strcmp(plate_4, plate_6) == 0 || strcmp(plate_5, plate_6) == 0){
-
-                    printf("(ERROR) This vehicle is already in the parking!");
-
-                }else{
-                    num_cars++;
-                }
-            }
-
-            if(loop == 7){
-                if(strcmp(plate_1, plate_2) == 0 || strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0 || strcmp(plate_1, plate_4) == 0 || strcmp(plate_2, plate_4) == 0
-                || strcmp(plate_3, plate_4) == 0 || strcmp(plate_1, plate_5) == 0 || strcmp(plate_2, plate_5) == 0 || strcmp(plate_3, plate_5) == 0 || strcmp(plate_4, plate_5) == 0 
-                || strcmp(plate_1, plate_6) == 0 || strcmp(plate_2, plate_6) == 0 || strcmp(plate_3, plate_6) == 0 || strcmp(plate_4, plate_6) == 0 || strcmp(plate_5, plate_6) == 0
-                || strcmp(plate_1, plate_7) == 0 || strcmp(plate_2, plate_7) == 0 || strcmp(plate_3, plate_7) == 0 || strcmp(plate_4, plate_7) == 0 || strcmp(plate_5, plate_7) == 0
-                || strcmp(plate_6, plate_7) == 0){
-
-                    printf("(ERROR) This vehicle is already in the parking!");
-
-                }else{
-                    num_cars++;
-                }
-            }
-
-            if(loop == 8){
-                if(strcmp(plate_1, plate_2) == 0 || strcmp(plate_1, plate_3) == 0 || strcmp(plate_2, plate_3) == 0 || strcmp(plate_1, plate_4) == 0 || strcmp(plate_2, plate_4) == 0
-                || strcmp(plate_3, plate_4) == 0 || strcmp(plate_1, plate_5) == 0 || strcmp(plate_2, plate_5) == 0 || strcmp(plate_3, plate_5) == 0 || strcmp(plate_4, plate_5) == 0 
-                || strcmp(plate_1, plate_6) == 0 || strcmp(plate_2, plate_6) == 0 || strcmp(plate_3, plate_6) == 0 || strcmp(plate_4, plate_6) == 0 || strcmp(plate_5, plate_6) == 0
-                || strcmp(plate_1, plate_7) == 0 || strcmp(plate_2, plate_7) == 0 || strcmp(plate_3, plate_7) == 0 || strcmp(plate_4, plate_7) == 0 || strcmp(plate_5, plate_7) == 0
-                || strcmp(plate_6, plate_7) == 0 || strcmp(plate_1, plate_8) == 0 || strcmp(plate_2, plate_8) == 0 || strcmp(plate_3, plate_8) == 0 || strcmp(plate_4, plate_8) == 0
-                || strcmp(plate_5, plate_8) == 0 || strcmp(plate_6, plate_8) == 0 || strcmp(plate_7, plate_8) == 0){
-
-                    printf("(ERROR) This vehicle is already in the parking!");
-
-                }else{
-                    num_cars++;
-                }
-            }    
+    return equal;
+               
 }
 
 
@@ -690,17 +758,53 @@ int main(){
 
     // Variables
     
+    int min_1;
+    int hour_1;
+
+    int min_2;
+    int hour_2;
+
+    int min_3;
+    int hour_3;
+
+    int min_4;
+    int hour_4;
+
+
+    int min_5;
+    int hour_5;
+
+    int min_6;
+    int hour_6;
+
+    int min_7;
+    int hour_7;
+
+    int min_8;
+    int hour_8;
+
+
+
+    int num_cars = 0;
+    char* srt;
+
+    char* str_2;
+    
+    char* str_3;
+    
+    char* str_4;
+    
+    char* str_5;
+    
+    char* str_6;
+    
+    char* str_7;
+    
+    char* str_8;
+
+
     char tariffs[MAX_TARIF];
     char command[MAX_COMAND];
-
-    char* str_plate_1;
-    char* str_plate_2;
-    char* str_plate_3;
-    char* str_plate_4;
-    char* str_plate_5;
-    char* str_plate_6;
-    char* str_plate_7;
-    char* str_plate_8;
 
 
     //menu
@@ -716,9 +820,13 @@ int main(){
     int int_quit = 1;
     char str_quit[MAX_COMAND] = "quit";
 
-    int r_verificate_enter_command = 0;
     int loop = 1;
 
+    int equal = 0; // 0 -> no validp
+
+    int valid = 0;
+
+    int test = 0;
 
     printf("Welcome to Parking LS!\n");
 
@@ -741,85 +849,110 @@ int main(){
         fix_str(command);
 
         int_enter = identify_comand(command, str_enter);
-        r_verificate_enter_command = verificate_enter_command(command);
+        verificate_enter_command(command);
 
 
 
+        if(int_enter == 0 && num_cars < MAX_VEHICLES){
 
-        if(int_enter == 0 && r_verificate_enter_command == 0){
-            // error command / time format
-        }
-
+            test = verificate_enter_command(command);
 
 
-
-        if(int_enter == 0 && r_verificate_enter_command == 1){
 
             if(loop == 1){
-                verificate_enter_command(command);
-                    str_plate_1 = plate_1(command);
+                valid = verificate_enter_command(command);
+                srt =  plate_1(command);
+                hour_1 = atoi(extract_hour(command));
+                min_1 = atoi(extract_min(command));
 
-                for(int i ; str_plate_1[i] != '\0'; i++){
-                    printf("\n%c\n", str_plate_1[i]);
+                if(valid == 1){
+                    num_cars++;
                 }
+            
+
             } 
 
             if(loop == 2){
                 verificate_enter_command(command);
-                char* str_plate_2 = plate_2(command);
-                //compare_plates()
+                str_2 = plate_2(command);
+                hour_2 = atoi(extract_hour(command));
+                min_2 = atoi(extract_min(command));
+
+
 
             } 
 
             if(loop == 3){
                 verificate_enter_command(command);
-                str_plate_3 = plate_3(command);
-            }
+                str_3 = plate_3(command);
+                hour_3 = atoi(extract_hour(command));
+                min_3 = atoi(extract_min(command));
+
+
+}
 
             if(loop == 4){
                 verificate_enter_command(command);
-                str_plate_4 = plate_4(command);
+                str_4 = plate_4(command);
+                hour_4 = atoi(extract_hour(command));
+                min_4 = atoi(extract_min(command));
             }
 
             if(loop == 5){
                 verificate_enter_command(command);
-                str_plate_5 = plate_5(command);
+                str_5 = plate_5(command);
+                hour_5 = atoi(extract_hour(command));
+                min_5 = atoi(extract_min(command));
             }
 
             if(loop == 6){
                 verificate_enter_command(command);
-                str_plate_6 = plate_6(command);
+                str_6 = plate_6 ( command);
+                hour_6 = atoi(extract_hour(command));
+                min_6 = atoi(extract_min(command));
             }
 
             if(loop == 7){
                 verificate_enter_command(command);
-                str_plate_7 = plate_7(command);
+                str_7 = plate_7(command);
+                hour_7 = atoi(extract_hour(command));
+                min_7 = atoi(extract_min(command));
             }
 
             if(loop == 8){
                 verificate_enter_command(command);
-                str_plate_8 = plate_8(command);
+                str_8 = plate_8(command);
+                hour_8 = atoi(extract_hour(command));
+                min_8 = atoi(extract_min(command));
             } 
 
-            compare_plates(str_plate_1, str_plate_2, str_plate_3, str_plate_4, str_plate_5, str_plate_6, str_plate_7, str_plate_8, loop);
+
+            if(loop > 8){
+                verificate_enter_command(command);
+            }
+
+
+            if(valid == 1){
+                equal = compare_plates(srt, str_2, str_3, str_4, str_5, str_6, str_7, str_8, loop, num_cars);
+
+                if(1 == equal){
+                    num_cars++;
+                }
+
+            }
+
+            printf("valid: %d, num: %d", valid, num_cars);
 
 
             if(loop <= MAX_VEHICLES){
                 loop++;
             }
 
-            if(loop > MAX_VEHICLES){
+            if(num_cars > MAX_VEHICLES){
+                verificate_enter_command(command);
                 printf("(ERROR) No more vehicles are accepted\n ");
             }
         }
-        
-
-
-
-
-
-
-
 
 
 
@@ -844,15 +977,6 @@ int main(){
 
     }while(int_quit != 0);
 
-
-    free(str_plate_1);
-    free(str_plate_2);
-    free(str_plate_3);
-    free(str_plate_4);
-    free(str_plate_5);
-    free(str_plate_6);
-    free(str_plate_7);
-    free(str_plate_8);
 
 
     printf("See you later!");

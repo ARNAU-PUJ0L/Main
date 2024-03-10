@@ -1,5 +1,5 @@
 EDA Netlist Writer report for SCH
-Wed Feb 21 15:13:43 2024
+Tue Mar 05 10:00:50 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Feb 21 15:13:42 2024 ;
+; EDA Netlist Writer Status ; Successful - Tue Mar 05 10:00:50 2024 ;
 ; Revision Name             ; SCH                                   ;
 ; Top-level Entity Name     ; SCH                                   ;
 ; Family                    ; MAX 10                                ;
@@ -93,7 +93,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Feb 21 15:13:41 2024
+    Info: Processing started: Tue Mar 05 10:00:49 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Quartus/SCH/simulation/qsim/ SCH -c SCH
 Warning (20013): Ignored 24 assignments for entity "v_system" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity v_system -section_id Top was ignored
@@ -124,8 +124,8 @@ Warning (18236): Number of processors has not been specified which may cause ove
 Info (204019): Generated file SCH.vo in folder "C:/Quartus/SCH/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 26 warnings
     Info: Peak virtual memory: 4638 megabytes
-    Info: Processing ended: Wed Feb 21 15:13:43 2024
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Mar 05 10:00:50 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
